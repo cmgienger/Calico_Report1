@@ -1,0 +1,375 @@
+---
+title: "Home Range for Calico Basin Gila Monsters"
+author: Chris Gentry and Chris Gienger
+output: 
+  html_document:
+      number_sections: true
+---
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+</style>
+
+The draft script in this document is being prepared to automate calculations for various home range estimations including *Minimum Convex Polygon*, *Kernel Density Estimation*, and *Brownian Bridge (too be added)*. 
+
+The following packages are used in this project:<br>
+<div class="col2">
+<ul>
++ adehabitatHR
++ data.table
++ ggplot2
++ ggfortify
++ grid
++ OpenStreetMap
++ pbapply
++ plotly
++ rgdal
++ sp</ul>
+</div>
+<br>
+```{r Packages, message=FALSE, paged.print=FALSE}
+library(adehabitatHR) #for home range calculations
+library(data.table) #manipulate S3 and S4 data tables
+library(ggplot2) #for graphic output
+library(ggfortify) #to allow ggplot2 to read spatial data
+library(grid) #to add annotations to the output
+library(rJava) # required for OpenStreetMap
+library(OpenStreetMap) #for obtaining raster images
+library(pbapply) #needed for progress bar
+library(plotly) #for interactive xy plot
+library(rgdal) #for converting spatial data
+library(sp) #for converting spatial data
+```
+<br>
+The data we are using for this sample script contains data for 20 Gila Monsters (2218 observations) with the following variables:<br>
+<ul>
++ Animal ID displayed as LIZARDNUMBER
++ DATE
++ TIME
++ PERSONNEL
++ Location as EASTING and NORTHING</ul><br>
+
+This is a subset of the original data provided with 22 Gila Monsters. However, in order to use the **LIZARDNUMBER** variable as an identity, the names were changed to SEX+ID and LIZARDNUMBER F8 and M13 were removed due to lack of appropriate number of observations. <br>
+
+```{r Import Data, results="hide"}
+data <- read.csv("hesu_bd_20191010.csv")
+```
+<br>
+In order to examine the data for consistency and outliers, the data was first plotted in the ```plotly``` package to interactively check the data.<br>
+
+```{r Interactive Plot, echo=TRUE}
+p <- ggplot() + geom_point(data=data, aes(EASTING,NORTHING, color=LIZARDNUMBER)) + labs(x="Easting", y="Northing")
+ggplotly(p)
+```
+<br>
+This provides the opportunity to look at all data points, or subset to individuals by double-clicking on the ID in the legend. Double-click again to return to all records.<br>
+
+## Basic Mapping with Raster Imagery
+```OpenStreetMap``` is used to obtain aerial imagery of the site. OSM uses decimal degrees so more work will need to be done in order to use UTM values directly. To create a generic script that will work with any dataset containing coordinates, we generated an object based on the minimum and maximum location values. A constant was added to the bounding coordinates to create a buffer around the maximum/minimum x and y data points. Otherwise, some points would fall along the edge of the raster image. This buffer can be adjusted based on the data.
+<br>
+```{r Get Raster Imagery, results="hide"}
+utm_points <- cbind(data$EASTING, data$NORTHING)
+utm_locations <- SpatialPoints(utm_points, proj4string=CRS("+proj=utm +zone=12 +datum=WGS84"))
+latlon_locations <- as.data.frame(spTransform(utm_locations, CRS("+proj=longlat +datum=WGS84")))
+colnames(latlon_locations) <- c("x","y")
+raster <- openmap(c(max(latlon_locations$y)+0.002, min(latlon_locations$x)-0.002), 
+                  c(min(latlon_locations$y)-0.002, max(latlon_locations$x)+0.002), type = "bing")
+raster_utm <- openproj(raster, projection = "+proj=utm +zone=12 +ellps=WGS84 +units=m +no_defs")
+```
+<br>
+This generates a BING aerial image and converts the coordinate system to UTM to match the data. Although not required, you can set your map or chart themes in advance by creating an object such as:<br>
+<br>
+```{r Create Default Look, results="hide"}
+map_theme <- list(theme(panel.grid.minor = element_blank(),
+                       panel.background = element_blank(),
+                       plot.background = element_blank(),
+                       plot.title = element_blank(),
+                       axis.text.x = element_text(vjust = 0.5),
+                       axis.title = element_text(face="bold")))
+```
+Otherwise you can map the data and add the necessary theme information inline.<br>
+```{r Map with Raster Image, echo=TRUE}
+autoplot(raster_utm, expand = TRUE) + theme_bw() + theme(legend.position="none") +
+  theme(panel.border = element_rect(colour = "black", fill=NA, size=1)) +
+  geom_point(data=data, aes(EASTING,NORTHING, color=LIZARDNUMBER), size = 3, alpha = 0.8) +
+  theme(axis.title = element_text(face="bold")) + labs(x="Easting", y="Northing")
+```
+<br>
+If you add ```+ facet_wrap(~LIZARDNUMBER)``` to the end of the script above, it will create side-by-side maps with **LIZARDNUMBER** identified at the top of each. It will also take some time to compile to be patient.<br>
+```{r Faceted Maps, echo=FALSE}
+autoplot(raster_utm, expand = TRUE) + theme_bw() + theme(legend.position="none") +
+  theme(panel.border = element_rect(colour = "black", fill=NA, size=1)) +
+  geom_point(data=data, aes(EASTING,NORTHING, color=LIZARDNUMBER), size = 3, alpha = 0.8) +
+  theme(axis.title = element_text(face="bold")) + labs(x="Easting", y="Northing") + facet_wrap(~LIZARDNUMBER)
+```
+<br>
+
+## Home Range Generation
+The **adehabitatHR** package uses *spatial data frames* which can be challenging to work with in R. In this example we created a new object for the spatial points dataframe using the XY data from the original test dataset.<br>
+
+```{r Create Spatial Data, results="hide"}
+x <- as.data.frame(data$EASTING)
+y <- as.data.frame(data$NORTHING)
+xy <- c(x,y)
+data.proj <- SpatialPointsDataFrame(xy,data, proj4string = CRS("+proj=utm +zone=12 +ellps=WGS84 +units=m +no_defs"))
+```
+*Notice that the projection of the new object was set to UTM Zone 12.*<br>
+
+When creating a minimum convex polygon for the full data set (not at the individual animal level). you can use the *SpatialPointsDataFrame* created above, but R will report a warning that ```xy should contain only one column (the id of the animals), id ignored``` but will report the appropriate measurement. To run the script without a warning you will need to create a new object containing only the XY data in one column. Both scripts are as follows:<br>
+
+<div class="col2">
+```{r message=FALSE, warning=FALSE, results="hide"}
+#Without creating additional XY object
+mcp(data.proj, percent=100,unout="ha")
+```
+
+```{r, results="hide"}
+#With additional XY object
+xy <- SpatialPoints(data.proj@coords)
+mcp.out <- mcp(xy, percent=100, unout="ha")
+```
+</div>
+
+<br>
+Where in function **mcp**,  ```mcp(xy, percent=100, unin = c("m", "km"), unout = c("ha", "km2", "m2"))```, *data.proj* acts as the XY. Both versions of the code report a MCP of **462.5188 ha**<br>
+
+To calculate a **kernel density estimation** for the entire populations we will repeat steps similar to the above example for MCP.<br>
+
+<div class="col2">
+```{r message=FALSE, warning=FALSE, results="hide"}
+#Without creating additional XY object
+kde<-kernelUD(data.proj, h="href", kern="bivnorm", grid=1000)
+ver <- getverticeshr(kde, 95)
+```
+```{r, results="hide"}
+#With additional XY object
+kde<-kernelUD(xy, h="href", kern="bivnorm", grid=1000)
+ver <- getverticeshr(kde, 95)
+```
+</div>
+<br>
+Where in function **kde**,  ```kernelUD(xy, h = "href", grid = 60, same4all = FALSE, hlim = c(0.1, 1.5), kern = c("bivnorm", "epa"), extent = 1, boundary = NULL)```, *data.proj* acts as the XY. To extract the 95% contour for home range we use the ```getverticeshr(x, percent = 95, ...)``` function with x being a call to the **kde** object. Both versions of the code report a kernel home range of **408.9635 ha**<br>
+
+
+## Mapping the Home Range Data
+In order to plot this new data, we will need to create *point* and *polygon* data from the new **mcp** and **kde** outputs. To do this we will need ```ggfortify``` to help ```ggplot2``` read the spatial data. The **mcp** version will be created using the separate xy object created above, and the **kde** example will be created without the separate xy object. <br>
+
+<div class="col2">
+```{r MCP Points and Polygon, results="hide"}
+#mcp plot for all points
+mcp.points <- cbind((data.frame(xy)),data$LIZARDNUMBER)
+colnames(mcp.points) <- c("x","y", "lizardnumber")
+mcp.poly <- fortify(mcp.out, region = "id")
+```
+
+```{r KDE Points and Polygon, results="hide"}
+#kde plot for all points
+kde.points <- cbind((data.frame(data.proj@coords)),data$LIZARDNUMBER)
+colnames(kde.points) <- c("x","y","lizardnumber")
+kde.poly <- fortify(ver, region = "id")
+```
+</div>
+<br>
+We can use the raster imagery generated above and this newly created data to generate an overview of **mcp** and **kde** polygons with point data of the xy values for all individuals through graphic operations in ```ggplot2```.<br>
+
+```{r Raster Map with KDE, echo=TRUE}
+autoplot(raster_utm, expand = TRUE) + theme_bw() + theme(legend.position="none") +
+  theme(panel.border = element_rect(colour = "black", fill=NA, size=1)) +
+  geom_polygon(data=kde.poly, x=kde.poly$long, y=kde.poly$lat, alpha = 0.5) +
+  geom_point(data=kde.points, aes(x=x, y=y, color = lizardnumber)) +
+  theme(axis.title = element_text(face="bold")) + labs(x="Easting", y="Northing")
+```
+<br>
+To create a similar plot for **mcp** simply alter the script above in the ```geom_poly()``` and ```geom_point()``` to values for **mcp.poly** and **mcp.points** objects.<br>
+
+## Calculations for Individuals
+In order to create plots for each individual we will can parse out each unique *LIZARDNUMBER* from the **data** object and generate new files to be used in an analysis similar to above. To start, we will write a function to split the **data** data by each individual *LIZARDNUMBER*. Then we will create an object that contains a list of all the individual files we created. <br>
+
+To generate new files we use the following function:
+```{r Generate Individual Files, results="hide"}
+lapply(split(data, data$LIZARDNUMBER), 
+       function(x)write.csv(x, file = paste(x$LIZARDNUMBER[1],".csv"), row.names = FALSE))
+```
+<br>
+Then we use this to generate a list of the files names:
+```{r Generate List of Files, results="hide"}
+files <- list.files(path = ".", pattern = "[MF]+[0-9]", full.names = TRUE)
+```
+<br>
+If you examine your working directory you will see several new *.csv* files create with **LIZARDNUMBER** used as the file name and a new **files** value in the *RStudio* environment. Next we need to create a function to perform the same analysis on the new individual files. Essentially, we are going to combine the scripts above into one function that produces consistent output for each individual **LIZARDNUMBER**.<br>
+
+### Looping Function for MCP and KDE
+<div style="float: left; width: 50%;">
+```{r MCP Loop Function, results="hide"}
+#looping function for mcp
+mcp_analysis <- function(filename){
+  data <- read.csv(file = filename)
+  x <- as.data.frame(data$EASTING)
+  y <- as.data.frame(data$NORTHING)
+  xy <- c(x,y)
+  data.proj <- SpatialPointsDataFrame(xy,data, proj4string = CRS("+proj=utm +zone=12 +ellps=WGS84 +units=m +no_defs"))
+  xy <- SpatialPoints(data.proj@coords)
+  mcp.out <- mcp(xy, percent=100, unout="ha")
+  area <- as.data.frame(round(mcp.out@data$area,4))
+  .rowNamesDF(area, make.names=TRUE) <- data$LIZARDNUMBER
+  write.table(area,file="MCP_Hectares.csv", 
+              append=TRUE,sep=",", col.names=FALSE, row.names=TRUE)
+  mcp.points <- cbind((data.frame(xy)),data$LIZARDNUMBER)
+  colnames(mcp.points) <- c("x","y", "lizardnumber")
+  mcp.poly <- fortify(mcp.out, region = "id")
+  units <- grid.text(paste(round(mcp.out@data$area,2)," ha"), x=0.9,  y=0.95,
+                     gp=gpar(fontface=4, cex=0.9), draw = FALSE)
+  mcp.plot <- ggplot() +
+    geom_polygon(data=mcp.poly, aes(x=mcp.poly$long, y=mcp.poly$lat), alpha=0.5) +
+    geom_point(data=mcp.points, aes(x=x, y=y)) + theme_bw() + 
+    labs(x="Easting (m)", y="Northing (m)", title=mcp.points$lizardnumber) +
+    theme(legend.position="none", plot.title = element_text(face = "bold", hjust = 0.5)) + 
+    annotation_custom(units)
+  mcp.plot
+  
+  
+  
+  
+  
+  
+}
+```
+</div>
+<div style="float: right; width: 50%;">
+```{r KDE Loop Function, results="hide"}
+#looping function for kde
+kde_analysis <- function(filename){
+  data <- read.csv(file = filename)
+  x <- as.data.frame(data$EASTING)
+  y <- as.data.frame(data$NORTHING)
+  xy <- c(x,y)
+  data.proj <- SpatialPointsDataFrame(xy,data, proj4string = CRS("+proj=utm +zone=12 +ellps=WGS84 +units=m +no_defs"))
+  xy <- SpatialPoints(data.proj@coords)
+  kde<-kernelUD(xy, h="href", kern="bivnorm", grid=1000)
+  ver <- getverticeshr(kde, 95)
+  area <- as.data.frame(round(ver$area,4))
+  .rowNamesDF(area, make.names=TRUE) <- data$LIZARDNUMBER
+  write.table(area,file="KDE_Hectares.csv", 
+              append=TRUE,sep=",", col.names=FALSE, row.names=TRUE)
+  kde.points <- cbind((data.frame(data.proj@coords)),data$LIZARDNUMBER)
+  colnames(kde.points) <- c("x","y","lizardnumber")
+  kde.poly <- fortify(ver, region = "id")
+  units <- grid.text(paste(round(ver$area,2)," ha"), x=0.9,  y=0.95,
+                     gp=gpar(fontface=4, cex=0.9), draw = FALSE)
+  kde.plot <- ggplot() +
+    geom_polygon(data=kde.poly, aes(x=kde.poly$long, y=kde.poly$lat), alpha = 0.5) +
+    geom_path(data=kde.points, aes(x=x,y=y), linetype = "dashed", colour = "red",
+              arrow = arrow(length=unit(0.30,"cm"), angle = 20, ends="last", type = "closed")) +
+    geom_point(data=kde.points, aes(x=x, y=y)) + theme_bw() + 
+    labs(x="Easting (m)", y="Northing (m)", title=kde.points$lizardnumber) +
+    theme(legend.position="none", plot.title = element_text(face = "bold", hjust = 0.5)) + 
+    annotation_custom(units)
+  kde.plot
+}
+```
+</div>
+<br>
+If you examine the two scripts above compared to the original script we used to generate either the **mcp** or the **kde** analysis for all individuals you will notice a few additions made to the script. Notice that in each case an *area* object created with ```area <- as.data.frame(round(mcp.out@data$area,4))``` or ```area <- as.data.frame(round(ver$area,4))``` respectively for the mcp and kde analysis. This creates an object that records the area of the polygon generated for each run instance of the function. They are being stored in a table using the ```write.table``` function with the ```append=TRUE``` statement to create an output file containing all of the area information. Additionally, the **units** object is storing the area values and overlaying it on the output chart using the ```annotation_custom(units)``` line.
+<br>
+To run the function above on an individual record you simply type ```mcp_analysis("*.csv")``` or ```kde_analysis("*.csv")```. If you want to run the script on **all** files in the *files* list use:<br>
+```pblapply(files,mcp_analysis)```
+<br>
+Because some of these analyses take time to complete, we used the ```pbapply``` function to add a progress bar to the console.
+<br>
+To run the **KDE** analysis on all individuals use ```pblapply(files,kde_analysis)``` instead, but remember that the **KDE** takes significantly longer than **MCP**.<br>
+You can also run the function to create **MCP** or **KDE** plots for each individual with the raster image from above in the background.<br>
+```{r Run KDE with Raster Function on all individuals, results="hide"}
+kde_raster <- function(filename){
+  data <- read.csv(file = filename)
+  x <- as.data.frame(data$EASTING)
+  y <- as.data.frame(data$NORTHING)
+  xy <- c(x,y)
+  data.proj <- SpatialPointsDataFrame(xy,data, proj4string = CRS("+proj=utm +zone=12 +ellps=WGS84 +units=m +no_defs"))
+  xy <- SpatialPoints(data.proj@coords)
+  kde<-kernelUD(xy, h="href", kern="bivnorm", grid=1000)
+  ver <- getverticeshr(kde, 95)
+  kde.points <- cbind((data.frame(data.proj@coords)),data$LIZARDNUMBER)
+  colnames(kde.points) <- c("x","y","lizardnumber")
+  kde.poly <- fortify(ver, region = "id")
+  units <- grid.text(paste(round(ver$area,2)," ha"), x=0.9,  y=0.95,
+                     gp=gpar(fontface=4, col="white", cex=0.9), draw = FALSE)
+  kde.plot <- autoplot(raster_utm, expand = TRUE) + theme_bw() + theme(legend.position="none") +
+    theme(panel.border = element_rect(colour = "black", fill=NA, size=1)) +
+    geom_polygon(data=kde.poly, aes(x=kde.poly$long, y=kde.poly$lat), alpha = 0.8) +
+    geom_point(data=kde.points, aes(x=x, y=y)) +
+    labs(x="Easting (m)", y="Northing (m)", title=kde.points$lizardnumber) +
+    theme(legend.position="none", plot.title = element_text(face = "bold", hjust = 0.5)) + 
+    annotation_custom(units)
+  kde.plot
+}
+```
+<br>
+Again, to run this analysis on all individual files you use ```pblapply(files,kde_raster)``` or to run on an individual you use ```kde_analysis("*.csv")``` Remember that the **KDE** takes a while to run, and with a raster in the background it takes even longer, so stay paitent!<br>
+
+The script above provides one example of generating graphic and tabular output of home range for various individuals contained within one dataset. In order to complete the process we took the additional step of creating separate .csv files for each individual. This might not be the most elegant or efficient method depending on the size and format of your dataset. However, this process provided the most straight forward execution of the analyses for beginner and intermediate users of *R* or the ```adehabitatHR``` package. One of the limitations of this method is the generation of separate files for each individual. Although creating a *for loop* may seem easier, each method has their inherent limitations. While this method provides the ability to run the same script on single or multiple individuals, it has the potential to create a large number of files within your R project. For this example of 20 individuals there are no issues regarding storage space, but a data set of 2000 individuals could find the number of additional files overwhelming. By incorporating the following script: ```unlink(x, recursive = FALSE)``` <br><br> where **x** is an individual or an object containing a list of files similar to the *files* create above <br><br> you can quickly remove all additional .csv generated in the steps above. This portion of the script was not written into this document as a code snippet to avoid having it run inadvertently.<br> 
+<br>
+
+Additional analyses added to this project are a trajectory analysis (movement of the animal between each relocation) and an analysis of distance over time (distance moved between each relocation). These analyses have been created similarly to the ones above by making functions to loop through each previously created individual file and creating an output graph and .csv file for each analysis as applicable.<br>
+
+### Looping Function for Trajectory and Distance Analysis
+<div style="float: left; width: 50%;">
+```{r Trajectory Loop Function, results="hide"}
+#trajectory analysis
+traj_analysis <- function(filename){
+  relocs_data <- read.csv(file = filename)
+  relocs <- as.ltraj(cbind(relocs_data$EASTING, relocs_data$NORTHING),id=relocs_data$LIZARDNUMBER, typeII = FALSE, date=NULL)
+  relocs.df <- ld(relocs)
+  relocs_dist <- as.data.frame(sum(sapply(relocs.df$dist, sum, na.rm=TRUE)))
+  colnames(relocs_dist) <- "Total Distance"
+  name <- relocs.df$id[1]
+  row.names(relocs_dist) <- name
+  relocs_units <- grid.text(paste(round(relocs_dist,2),"m"), x=0.9, y=0.9, 
+                            gp=gpar(fontface=3, col="black", cex=0.9), draw = FALSE)
+  reloc.plot <- ggplot() + theme_classic() + geom_path(data=relocs.df, aes(x=x,y=y), linetype = "dashed", colour = "red",
+    arrow = arrow(length=unit(.5,"cm"), angle = 20, ends="last", type = "closed")) +
+    geom_point(data=relocs.df, aes(x=x, y=y)) + geom_point(data=relocs.df, aes(x=x[1], 
+    y=y[1]), size = 3, color = "darkgreen", pch=0) +
+    labs(x="Easting (m)", y="Northing (m)", title=relocs.df$id[1]) +
+    theme(legend.position="none", plot.title = element_text(face = "bold", hjust = 0.5)) +
+    annotation_custom(relocs_units)
+  reloc.plot
+}
+```
+</div>
+<div style="float: right; width: 50%;">
+```{r Distance over time Loop Function, results="hide"}
+#distance over time analysis
+dist_analysis <- function(filename){
+  relocs_data <- read.csv(file = filename)
+  relocs <- as.ltraj(cbind(relocs_data$EASTING, relocs_data$NORTHING),id=relocs_data$LIZARDNUMBER, typeII = FALSE, date=NULL)
+  relocs.df <- ld(relocs)
+  relocs_dist <- as.data.frame(sum(sapply(relocs.df$dist, sum, na.rm=TRUE)))
+  colnames(relocs_dist) <- "Total Distance"
+  name <- relocs.df$id[1]
+  row.names(relocs_dist) <- name
+  write.table(relocs_dist,file="reloc_dist.csv", 
+              append=TRUE,sep=",", col.names=FALSE, row.names=TRUE)
+  dist.plot <- ggplot() + geom_point(data = relocs.df, aes(x=date, y=dist), na.rm = TRUE) + theme_classic() +
+    geom_path(data = relocs.df, aes(x=date, y=dist), stat = "identity", na.rm = TRUE) +
+    labs(x="Date", y="Distance (m)", title=relocs.df$id[1]) + 
+    theme(legend.position="none", plot.title = element_text(face = "bold", hjust = 0.5))
+  dist.plot
+
+  
+  
+    
+  
+  
+}
+```
+</div>
+<br>
+Similar to the steps above, to run these analyses you simply use either ```pblapply(files, traj_analysis)``` or ```pblapply(files, dist_analysis)``` for the respective analysis you wish to run. The trajectory analysis creates a graphical output for each individual and the distance analysis create a graphical output as well as a data table to total distance moved from the first to last relocation. <br>
