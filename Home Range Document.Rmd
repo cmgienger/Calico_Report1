@@ -1,98 +1,87 @@
 ---
-title: "Home Range for Calico Basin Gila Monsters"
-author: C.M. Gienger
-date: 17 April 2020
+title: "Home Range Script for Stone Canyon"
+author: Chris Gentry and Chris Gienger
 output: 
   html_document:
       number_sections: true
 ---
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+</style>
 
+The draft script in this document is being prepared to automate calculations for various home range estimations including *Minimum Convex Polygon*, *Kernel Density Estimation*, and *Brownian Bridge (too be added)*. 
+
+The following packages are used in this project:<br>
+<div class="col2">
+<ul>
++ adehabitatHR
++ data.table
++ ggplot2
++ ggfortify
++ grid
++ OpenStreetMap
++ pbapply
++ plotly
++ rgdal
++ sp</ul>
+</div>
+<br>
 ```{r Packages, message=FALSE, paged.print=FALSE}
 library(adehabitatHR) #for home range calculations
 library(data.table) #manipulate S3 and S4 data tables
+library(ggplot2) #for graphic output
 library(ggfortify) #to allow ggplot2 to read spatial data
 library(grid) #to add annotations to the output
-library(lubridate) #manipulate date/time
-library(rJava) # required for OpenStreetMap
 library(OpenStreetMap) #for obtaining raster images
 library(pbapply) #needed for progress bar
 library(plotly) #for interactive xy plot
 library(rgdal) #for converting spatial data
 library(sp) #for converting spatial data
-library(tidyverse) #contains dplyr, ggplot2, broom, magrittR, etc.
 ```
+<br>
+The data we are using for this sample script contains data for 20 Gila Monsters (2218 observations) with the following variables:<br>
+<ul>
++ Animal ID displayed as LIZARDNUMBER
++ DATE
++ TIME
++ PERSONNEL
++ Location as EASTING and NORTHING</ul><br>
+
+This is a subset of the original data provided with 22 Gila Monsters. However, in order to use the **LIZARDNUMBER** variable as an identity, the names were changed to SEX+ID and LIZARDNUMBER F8 and M13 were removed due to lack of appropriate number of observations. <br>
 
 ```{r Import Data, results="hide"}
-data <- read.csv("hesu_bd_20191010.csv")
+data <- read.csv("test_data.csv")
 ```
-
-```{r Change Column Names}
-data <- data %>% rename(LIZARDNUMBER = HESU., 
-                        EASTING = UTM_Easting,
-                        NORTHING = UTM_Northing,
-                        DATE = Date)
-```
-
-```{r Confirm Date Format}
-data$DATE <- mdy_hm(data$DATE) #use lubridate to specify *incoming* date format (mdy_hm);
-#the current format is "mdy", need to convert column to "ymd" format (IMPOSSIBLE!!!)
-str(data$DATE) #look at DATE format to verify that it is converted to "ymd"
-```
-
-```{r Summarize Observations at Each Site}
-data %>%
-  group_by(Site) %>%
-  summarize(n())
-```
-
-```{r Filter by Study Site}
-data <- data %>% filter(Site == "Calico")
-```
-
-```{r Tracking Duration}
-#make a chart showing the tracking duration for each individual
-q <- ggplot(data, aes(DATE, LIZARDNUMBER)) +
-  geom_count (color = "blue", alpha=0.5) + #set symbol size proportional to # of overlapping obs (same day)
-  #scale_x_date(date_breaks = "12 month", labels = date_format("%Y"))+
-  theme(plot.subtitle = element_text(vjust = 1),
-        plot.caption = element_text(vjust = 1), 
-        axis.text = element_text(size = 14), 
-        legend.key = element_rect(fill = NA)) +
-  labs(title = "Tracking Duration and Intensity") +
-  labs(size = "Number of Obs.")
-q
-```
-```{r Summarize Temporal Dist. of Observations, even those without UTMs}
-data %>%
-  group_by(LIZARDNUMBER) %>%
-  summarize(n(),
-            firstobs = min(DATE),
-            lastobs = max(DATE),
-            duration = lastobs - firstobs)
-  
-```
-```{r Drop NA data from UTMs}
-data <- data %>% drop_na(EASTING)
-```
+<br>
+In order to examine the data for consistency and outliers, the data was first plotted in the ```plotly``` package to interactively check the data.<br>
 
 ```{r Interactive Plot, echo=TRUE}
 p <- ggplot() + geom_point(data=data, aes(EASTING,NORTHING, color=LIZARDNUMBER)) + labs(x="Easting", y="Northing")
 ggplotly(p)
 ```
-This provides the opportunity to look at all data points, or subset to individuals by double-clicking on the ID in the legend. Double-click again to return to all records.
+<br>
+This provides the opportunity to look at all data points, or subset to individuals by double-clicking on the ID in the legend. Double-click again to return to all records.<br>
 
 ## Basic Mapping with Raster Imagery
 ```OpenStreetMap``` is used to obtain aerial imagery of the site. OSM uses decimal degrees so more work will need to be done in order to use UTM values directly. To create a generic script that will work with any dataset containing coordinates, we generated an object based on the minimum and maximum location values. A constant was added to the bounding coordinates to create a buffer around the maximum/minimum x and y data points. Otherwise, some points would fall along the edge of the raster image. This buffer can be adjusted based on the data.
-
-CALICO BASIN DATA COLLECTED in NAD83 Zone 11 (WGS84 might be close enough for now)
+<br>
 ```{r Get Raster Imagery, results="hide"}
 utm_points <- cbind(data$EASTING, data$NORTHING)
-utm_locations <- SpatialPoints(utm_points, proj4string=CRS("+proj=utm +zone=11 +datum=WGS84"))
+utm_locations <- SpatialPoints(utm_points, proj4string=CRS("+proj=utm +zone=12 +datum=WGS84"))
 latlon_locations <- as.data.frame(spTransform(utm_locations, CRS("+proj=longlat +datum=WGS84")))
 colnames(latlon_locations) <- c("x","y")
 raster <- openmap(c(max(latlon_locations$y)+0.002, min(latlon_locations$x)-0.002), 
                   c(min(latlon_locations$y)-0.002, max(latlon_locations$x)+0.002), type = "bing")
-raster_utm <- openproj(raster, projection = "+proj=utm +zone=11 +ellps=WGS84 +units=m +no_defs")
+raster_utm <- openproj(raster, projection = "+proj=utm +zone=12 +ellps=WGS84 +units=m +no_defs")
 ```
 <br>
 This generates a BING aerial image and converts the coordinate system to UTM to match the data. Although not required, you can set your map or chart themes in advance by creating an object such as:<br>
