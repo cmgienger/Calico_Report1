@@ -223,7 +223,6 @@ files <- list.files(path = ".", pattern = "[hesuca]+[0-9]", full.names = TRUE)
 If you examine your working directory you will see several new *.csv* files create with **LIZARDNUMBER** used as the file name and a new **files** value in the *RStudio* environment. Next we need to create a function to perform the same analysis on the new individual files. Essentially, we are going to combine the scripts above into one function that produces consistent output for each individual **LIZARDNUMBER**.<br>
 
 ### Looping Function for MCP and KDE
-<div style="float: left; width: 50%;">
 ```{r MCP Loop Function, results="hide"}
 #looping function for mcp
 mcp_analysis <- function(filename){
@@ -252,8 +251,7 @@ mcp_analysis <- function(filename){
   mcp.plot
 }
 ```
-</div>
-<div style="float: right; width: 50%;">
+
 ```{r KDE Loop Function, results="hide"}
 #looping function for kde
 kde_analysis <- function(filename){
@@ -285,7 +283,6 @@ kde_analysis <- function(filename){
   kde.plot
 }
 ```
-</div>
 <br>
 If you examine the two scripts above compared to the original script we used to generate either the **mcp** or the **kde** analysis for all individuals you will notice a few additions made to the script. Notice that in each case an *area* object created with ```area <- as.data.frame(round(mcp.out@data$area,4))``` or ```area <- as.data.frame(round(ver$area,4))``` respectively for the mcp and kde analysis. This creates an object that records the area of the polygon generated for each run instance of the function. They are being stored in a table using the ```write.table``` function with the ```append=TRUE``` statement to create an output file containing all of the area information. Additionally, the **units** object is storing the area values and overlaying it on the output chart using the ```annotation_custom(units)``` line.
 <br>
@@ -330,7 +327,6 @@ The script above provides one example of generating graphic and tabular output o
 Additional analyses added to this project are a trajectory analysis (movement of the animal between each relocation) and an analysis of distance over time (distance moved between each relocation). These analyses have been created similarly to the ones above by making functions to loop through each previously created individual file and creating an output graph and .csv file for each analysis as applicable.<br>
 
 ### Looping Function for Trajectory and Distance Analysis
-<div style="float: left; width: 50%;">
 ```{r Trajectory Loop Function, results="hide"}
 #trajectory analysis
 traj_analysis <- function(filename){
@@ -353,8 +349,7 @@ traj_analysis <- function(filename){
   reloc.plot
 }
 ```
-</div>
-<div style="float: right; width: 50%;">
+
 ```{r Distance over time Loop Function, results="hide"}
 #distance over time analysis
 dist_analysis <- function(filename){
@@ -374,6 +369,5 @@ dist_analysis <- function(filename){
   dist.plot
 }
 ```
-</div>
 <br>
 Similar to the steps above, to run these analyses you simply use either ```pblapply(files, traj_analysis)``` or ```pblapply(files, dist_analysis)``` for the respective analysis you wish to run. The trajectory analysis creates a graphical output for each individual and the distance analysis create a graphical output as well as a data table to total distance moved from the first to last relocation. <br>
