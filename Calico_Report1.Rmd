@@ -1,13 +1,19 @@
 ---
 title: "Home Range for Calico Basin Gila Monsters"
 author: C.M. Gienger
-date: 17 April 2020
-output: 
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  html_notebook:
+    df_print: paged
   html_document:
-      number_sections: true
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: true
+subtitle: 'DCP Data Deliverable'
 ---
 
-```{r Packages, message=FALSE, paged.print=FALSE}
+```{r Setup, message=FALSE, include=FALSE}
 library(adehabitatHR) #for home range calculations
 library(data.table) #manipulate S3 and S4 data tables
 library(ggfortify) #to allow ggplot2 to read spatial data
@@ -20,6 +26,9 @@ library(plotly) #for interactive xy plot
 library(rgdal) #for converting spatial data
 library(sp) #for converting spatial data
 library(tidyverse) #contains dplyr, ggplot2, broom, magrittR, etc.
+
+knitr::opts_chunk$set(fig.path="Figs/", fig.width=6, fig.height=4, echo=FALSE) 
+#sends figs in each chunck to folder *after knitting*
 ```
 
 ```{r Import Data, results="hide"}
@@ -62,14 +71,15 @@ q <- ggplot(data, aes(DATE, LIZARDNUMBER)) +
   labs(size = "Number of Obs.")
 q
 ```
+
 ```{r Summarize Temporal Dist. of Observations, even those without UTMs}
 data %>%
   group_by(LIZARDNUMBER) %>%
   summarize(n(),
             firstobs = min(DATE),
             lastobs = max(DATE),
-            duration = lastobs - firstobs)
-  
+            duration = lastobs - firstobs) %>% 
+  arrange(LIZARDNUMBER)
 ```
 ```{r Drop NA data from UTMs}
 data <- data %>% drop_na(EASTING)
@@ -81,9 +91,6 @@ ggplotly(p)
 ```
 This provides the opportunity to look at all data points, or subset to individuals by double-clicking on the ID in the legend. Double-click again to return to all records.
 
-## Basic Mapping with Raster Imagery
-```OpenStreetMap``` is used to obtain aerial imagery of the site. OSM uses decimal degrees so more work will need to be done in order to use UTM values directly. To create a generic script that will work with any dataset containing coordinates, we generated an object based on the minimum and maximum location values. A constant was added to the bounding coordinates to create a buffer around the maximum/minimum x and y data points. Otherwise, some points would fall along the edge of the raster image. This buffer can be adjusted based on the data.
-
 CALICO BASIN DATA COLLECTED in NAD83 Zone 11 (WGS84 might be close enough for now)
 ```{r Get Raster Imagery, results="hide"}
 utm_points <- cbind(data$EASTING, data$NORTHING)
@@ -94,9 +101,7 @@ raster <- openmap(c(max(latlon_locations$y)+0.002, min(latlon_locations$x)-0.002
                   c(min(latlon_locations$y)-0.002, max(latlon_locations$x)+0.002), type = "bing")
 raster_utm <- openproj(raster, projection = "+proj=utm +zone=11 +ellps=WGS84 +units=m +no_defs")
 ```
-<br>
-This generates a BING aerial image and converts the coordinate system to UTM to match the data. Although not required, you can set your map or chart themes in advance by creating an object such as:<br>
-<br>
+
 ```{r Create Default Look, results="hide"}
 map_theme <- list(theme(panel.grid.minor = element_blank(),
                        panel.background = element_blank(),
@@ -105,8 +110,8 @@ map_theme <- list(theme(panel.grid.minor = element_blank(),
                        axis.text.x = element_text(vjust = 0.5),
                        axis.title = element_text(face="bold")))
 ```
-Otherwise you can map the data and add the necessary theme information inline.<br>
-```{r Map with Raster Image, echo=TRUE}
+
+```{r Map with Raster Image, echo=TRUE, fig.width=8}
 autoplot(raster_utm, expand = TRUE) + theme_bw() + theme(legend.position="none") +
   theme(panel.border = element_rect(colour = "black", fill=NA, size=1)) +
   geom_point(data=data, aes(EASTING,NORTHING, color=LIZARDNUMBER), size = 3, alpha = 0.8) +
@@ -129,9 +134,9 @@ The **adehabitatHR** package uses *spatial data frames* which can be challenging
 x <- as.data.frame(data$EASTING)
 y <- as.data.frame(data$NORTHING)
 xy <- c(x,y)
-data.proj <- SpatialPointsDataFrame(xy,data, proj4string = CRS("+proj=utm +zone=12 +ellps=WGS84 +units=m +no_defs"))
+data.proj <- SpatialPointsDataFrame(xy,data, proj4string = CRS("+proj=utm +zone=11 +ellps=WGS84 +units=m +no_defs"))
 ```
-*Notice that the projection of the new object was set to UTM Zone 12.*<br>
+*Notice that the projection of the new object was set to UTM Zone 11.*<br>
 
 When creating a minimum convex polygon for the full data set (not at the individual animal level). you can use the *SpatialPointsDataFrame* created above, but R will report a warning that ```xy should contain only one column (the id of the animals), id ignored``` but will report the appropriate measurement. To run the script without a warning you will need to create a new object containing only the XY data in one column. Both scripts are as follows:<br>
 
@@ -159,6 +164,7 @@ To calculate a **kernel density estimation** for the entire populations we will 
 kde<-kernelUD(data.proj, h="href", kern="bivnorm", grid=1000)
 ver <- getverticeshr(kde, 95)
 ```
+
 ```{r, results="hide"}
 #With additional XY object
 kde<-kernelUD(xy, h="href", kern="bivnorm", grid=1000)
@@ -211,7 +217,7 @@ lapply(split(data, data$LIZARDNUMBER),
 <br>
 Then we use this to generate a list of the files names:
 ```{r Generate List of Files, results="hide"}
-files <- list.files(path = ".", pattern = "[MF]+[0-9]", full.names = TRUE)
+files <- list.files(path = ".", pattern = "[hesuca]+[0-9]", full.names = TRUE)
 ```
 <br>
 If you examine your working directory you will see several new *.csv* files create with **LIZARDNUMBER** used as the file name and a new **files** value in the *RStudio* environment. Next we need to create a function to perform the same analysis on the new individual files. Essentially, we are going to combine the scripts above into one function that produces consistent output for each individual **LIZARDNUMBER**.<br>
@@ -244,12 +250,6 @@ mcp_analysis <- function(filename){
     theme(legend.position="none", plot.title = element_text(face = "bold", hjust = 0.5)) + 
     annotation_custom(units)
   mcp.plot
-  
-  
-  
-  
-  
-  
 }
 ```
 </div>
@@ -372,12 +372,6 @@ dist_analysis <- function(filename){
     labs(x="Date", y="Distance (m)", title=relocs.df$id[1]) + 
     theme(legend.position="none", plot.title = element_text(face = "bold", hjust = 0.5))
   dist.plot
-
-  
-  
-    
-  
-  
 }
 ```
 </div>
