@@ -62,7 +62,7 @@ data <- data %>% filter(Site == "Calico")
 #make a chart showing the tracking duration for each individual
 q <- ggplot(data, aes(DATE, LIZARDNUMBER)) +
   geom_count (color = "blue", alpha=0.5) + #set symbol size proportional to # of overlapping obs (same day)
-  #scale_x_date(date_breaks = "12 month", labels = date_format("%Y"))+
+  #scale_x_datetime(date_breaks = "12 month", date_labels="%Y")+
   theme(plot.subtitle = element_text(vjust = 1),
         plot.caption = element_text(vjust = 1), 
         axis.text = element_text(size = 14), 
@@ -78,7 +78,7 @@ data %>%
   summarize(n(),
             firstobs = min(DATE),
             lastobs = max(DATE),
-            duration = lastobs - firstobs) %>% 
+            duration = lastobs - firstobs) %>%
   arrange(LIZARDNUMBER)
 ```
 ```{r Drop NA data from UTMs}
