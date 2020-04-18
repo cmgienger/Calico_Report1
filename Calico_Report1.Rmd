@@ -104,10 +104,15 @@ data <- data %>% drop_na(EASTING)
 
 ```{r Map of Study Site}
 leaflet() %>%
-  setView(-115.418676, 36.151788, zoom = 13.5) %>% #lat-long of the place of interest
-  addProviderTiles(providers$OpenTopoMap) %>%
+  setView(-115.418676, 36.151788, zoom = 13.45) %>% #lat-long of the place of interest
+  addProviderTiles(providers$Stamen.Terrain) %>%
   addScaleBar() %>%
-  addMiniMap()
+  addMiniMap() %>%
+  addMarkers(
+    lng = -115.418676, lat = 36.151788,
+    label = "Calico Basin",
+    labelOptions = labelOptions(noHide = T, direction = "right", textOnly = TRUE, textsize = "20px"))
+
 ```
 
 ```{r Interactive Plot, echo=TRUE}
