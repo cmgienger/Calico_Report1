@@ -58,6 +58,19 @@ data %>%
 data <- data %>% filter(Site == "Calico")
 ```
 
+```{r Count number of obs for each lizard; add to dataframe so can be used as a filter}
+data <- data %>%
+  add_count(LIZARDNUMBER) %>%
+  filter(n > 15)
+```
+
+```{r Filter by Number of Observations for Each Lizard}
+data %>%
+  group_by(LIZARDNUMBER) %>%
+  count() %>%
+  filter(n >= 15)
+```
+
 ```{r Tracking Duration}
 #make a chart showing the tracking duration for each individual
 q <- ggplot(data, aes(DATE, LIZARDNUMBER)) +
