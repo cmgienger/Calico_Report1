@@ -68,7 +68,9 @@ data <- data %>%
 data %>%
   group_by(LIZARDNUMBER) %>%
   count() %>%
-  filter(n >= 15)
+  filter(n >= 15) %>%
+  arrange(n)
+#note that this is just a table to check on the filtering, not a reduction of the dataframe
 ```
 
 ```{r Tracking Duration}
