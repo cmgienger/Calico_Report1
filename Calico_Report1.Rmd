@@ -18,6 +18,7 @@ library(adehabitatHR) #for home range calculations
 library(data.table) #manipulate S3 and S4 data tables
 library(ggfortify) #to allow ggplot2 to read spatial data
 library(grid) #to add annotations to the output
+library(leaflet) # quick interactive locator map
 library(lubridate) #manipulate date/time
 library(rJava) # required for OpenStreetMap
 library(OpenStreetMap) #for obtaining raster images
@@ -96,8 +97,17 @@ data %>%
             duration = lastobs - firstobs) %>%
   arrange(duration)
 ```
-```{r Drop rows with NA data in UTMs}
+
+```{r Drop rows with NA data in UTM fields}
 data <- data %>% drop_na(EASTING)
+```
+
+```{r Map of Study Site}
+leaflet() %>%
+  setView(-115.418676, 36.151788, zoom = 13.5) %>% #lat-long of the place of interest
+  addProviderTiles(providers$OpenTopoMap) %>%
+  addScaleBar() %>%
+  addMiniMap()
 ```
 
 ```{r Interactive Plot, echo=TRUE}
