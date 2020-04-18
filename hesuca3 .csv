@@ -1,76 +1,76 @@
-"ObjectID","ObjectOld","GlobalID","LIZARDNUMBER","HESU.old","Site","DATE","Observer","DetectionType","ShelterAspect","Notes","CreationDate","Creator","EditDate","Editor","EASTING","NORTHING","x","y","Notes2"
+"ObjectID","ObjectOld","GlobalID","LIZARDNUMBER","HESU.old","Site","DATE","Observer","DetectionType","ShelterAspect","Notes","CreationDate","Creator","EditDate","Editor","EASTING","NORTHING","x","y","Notes2","n"
 116,116,"fd74d1c7-3e23-49f7-99b1-47cba3d02457","hesuca3","hesu3","Calico",2017-05-22 16:42:00,"jvanas","visual",NA,"UTM 
 0640994
 4002850
-Digging","5/22/17 21:29","NDOWherps","5/22/17 21:29","NDOWherps",640994,4002850,-115.43274,36.16018,""
+Digging","5/22/17 21:29","NDOWherps","5/22/17 21:29","NDOWherps",640994,4002850,-115.43274,36.16018,"",203
 218,218,"4895e58b-59f3-499f-9e5e-a32c2dc7d6bc","hesuca3","hesu3","Calico",2017-07-19 12:45:00,"jvanas","visual",172,"UTM 
 0640998
 4002964
 
-Use UT M. Forgot phone ","7/19/17 17:07","NDOWherps","7/19/17 17:07","NDOWherps",640998,4002964,NA,NA,""
+Use UT M. Forgot phone ","7/19/17 17:07","NDOWherps","7/19/17 17:07","NDOWherps",640998,4002964,NA,NA,"",203
 231,231,"6f8d004c-f9d6-4e95-bbbc-5ea97609e544","hesuca3","hesu3","Calico",2017-07-24 13:30:00,"jvanas","visual",172,"UTM 
 0640996
-4002961","7/24/17 18:01","NDOWherps","7/24/17 18:01","NDOWherps",640996,4002961,-115.43246,36.16124,""
-360,360,"d14ac804-0f9c-4810-ab23-2e7ffe4e3467","hesuca3","hesucal3","Calico",2018-01-31 19:01:00,"jjones","radio",140,"Utm 0641023, 4002988 +|-5m","1/31/18 22:17","jljones76","1/31/18 22:17","jljones76",641023,4002988,NA,NA,""
+4002961","7/24/17 18:01","NDOWherps","7/24/17 18:01","NDOWherps",640996,4002961,-115.43246,36.16124,"",203
+360,360,"d14ac804-0f9c-4810-ab23-2e7ffe4e3467","hesuca3","hesucal3","Calico",2018-01-31 19:01:00,"jjones","radio",140,"Utm 0641023, 4002988 +|-5m","1/31/18 22:17","jljones76","1/31/18 22:17","jljones76",641023,4002988,NA,NA,"",203
 422,422,"63f5e660-c967-4ce4-93fc-886703c8ebb7","hesuca3","hesu3","Calico",2018-04-01 17:40:00,"jvanas","visual",NA,"UTM
 0641138
 4002818
 
- Capture","4/1/18 22:51","NDOWherps","4/1/18 22:51","NDOWherps",641138,4002818,-115.43072,36.15976,""
+ Capture","4/1/18 22:51","NDOWherps","4/1/18 22:51","NDOWherps",641138,4002818,-115.43072,36.15976,"",203
 466,466,"d3b3ec71-1a40-45fa-99b7-bd388ab3a3e4","hesuca3","hesu3","Calico",2018-04-15 20:39:00,"jvanas","visual",NA,"UTM
 0641071
 4002874
 3 m
-Under cat claw ","4/15/18 23:50","NDOWherps","4/15/18 23:50","NDOWherps",641071,4002874,-115.43162,36.16042,""
+Under cat claw ","4/15/18 23:50","NDOWherps","4/15/18 23:50","NDOWherps",641071,4002874,-115.43162,36.16042,"",203
 467,467,"44c2a3b0-729e-4328-8e4f-dd6460e341c2","hesuca3","hesucal3","Calico",2018-04-17 19:07:00,"jvanas","radio",166,"Utm
 0642226
 4002878
   3 m
 Survey123 not working
-  Actual time 0815 hrs","4/17/18 21:27","NDOWherps","4/17/18 21:27","NDOWherps",642226,4002878,-115.16549,36.15531,""
-471,471,"986dc81d-ad35-461d-a518-90a7d62f8390","hesuca3","hesucal3","Calico",2018-04-18 17:31:00,"jvanas","visual",166,"Same shelter but C 12 gone","4/18/18 21:52","NDOWherps","4/19/18 15:40","NDOWherps",642226,4002875,NA,NA,""
+  Actual time 0815 hrs","4/17/18 21:27","NDOWherps","4/17/18 21:27","NDOWherps",642226,4002878,-115.16549,36.15531,"",203
+471,471,"986dc81d-ad35-461d-a518-90a7d62f8390","hesuca3","hesucal3","Calico",2018-04-18 17:31:00,"jvanas","visual",166,"Same shelter but C 12 gone","4/18/18 21:52","NDOWherps","4/19/18 15:40","NDOWherps",642226,4002875,NA,NA,"",203
 476,476,"2fea8188-6eee-43a1-9160-cff2df821a1c","hesuca3","hesucal3","Calico",2018-04-21 21:01:00,"jvanas","radio",220,"Utm
 0641214
 4002809
  3 m
-Shelter used last year with C 13. By path  ","4/22/18 12:07","NDOWherps","4/22/18 12:07","NDOWherps",641214,4002809,-115.4301,36.15979,""
+Shelter used last year with C 13. By path  ","4/22/18 12:07","NDOWherps","4/22/18 12:07","NDOWherps",641214,4002809,-115.4301,36.15979,"",203
 482,482,"10f8ad03-299e-438c-b317-f768ea8ee465","hesuca3","hesucal3","Calico",2018-04-24 14:21:00,"jvanas","visual",304,"utm 
 0640919
 4002937
 4 m
-","4/24/18 21:13","NDOWherps","4/24/18 21:13","NDOWherps",640919,4002937,-115.43255,36.1609,""
+","4/24/18 21:13","NDOWherps","4/24/18 21:13","NDOWherps",640919,4002937,-115.43255,36.1609,"",203
 500,500,"4ea8819b-1bcd-438b-b4c0-64ec34f53217","hesuca3","hesucal3","Calico",2018-04-28 14:30:00,"jvanas","visual",209,"Utm 
 0640976
 4002955
  4 m
- New shelter up slope ash creek ","4/28/18 20:24","NDOWherps","4/28/18 20:24","NDOWherps",640976,4002955,-115.43277,36.16095,""
+ New shelter up slope ash creek ","4/28/18 20:24","NDOWherps","4/28/18 20:24","NDOWherps",640976,4002955,-115.43277,36.16095,"",203
 516,516,"b8da9662-c314-4aaa-a0de-45ed3498facc","hesuca3","hesucal3","Calico",2018-04-30 22:01:00,"jvanas","visual",318,"Utm 
 0640991
 4002938
  5 m
 Shelter used last year
-Very shallow ","5/1/18 22:47","NDOWherps","5/1/18 22:47","NDOWherps",640991,4002938,-115.4325,36.16108,""
+Very shallow ","5/1/18 22:47","NDOWherps","5/1/18 22:47","NDOWherps",640991,4002938,-115.4325,36.16108,"",203
 528,528,"f3624c90-2f47-4f7c-9cd8-5da5de2db0ac","hesuca3","hesucal3","Calico",2018-05-05 16:58:00,"jvanas","visual",NA,"Utm 
 0641094
 4002816
-   3 m","5/5/18 21:43","NDOWherps","5/5/18 21:43","NDOWherps",641094,4002816,-115.43142,36.15978,""
+   3 m","5/5/18 21:43","NDOWherps","5/5/18 21:43","NDOWherps",641094,4002816,-115.43142,36.15978,"",203
 535,535,"c615e009-4fb7-4bd4-a602-fcafbff77504","hesuca3","hesucal3","Calico",2018-05-06 17:31:00,"jvanas","radio",NA,"Utm 
 0640993
 4002796
 3 m
-Moved across wash to rocky boulders. Half way up ","5/6/18 20:33","NDOWherps","5/6/18 20:33","NDOWherps",640993,4002796,-115.43262,36.15965,""
+Moved across wash to rocky boulders. Half way up ","5/6/18 20:33","NDOWherps","5/6/18 20:33","NDOWherps",640993,4002796,-115.43262,36.15965,"",203
 541,541,"8d678bff-303c-442a-97f9-27b71fcce599","hesuca3","hesucal3","Calico",2018-05-08 13:06:00,"jvanas","visual",NA,"Utm 
 0641493
 4002706
 5 m
-New shelter more west above creek","5/8/18 17:47","NDOWherps","5/8/18 17:47","NDOWherps",641493,4002706,-115.4272,36.1587,""
+New shelter more west above creek","5/8/18 17:47","NDOWherps","5/8/18 17:47","NDOWherps",641493,4002706,-115.4272,36.1587,"",203
 548,548,"420538cc-77bf-46e1-a77d-d1e477b1bde7","hesuca3","hesucal3","Calico",2018-05-10 17:04:00,"jvanas","radio",257,"Utm 
 0641008
  4 m
 
 4002888
 Back at Duplex shelter 
-","5/11/18 1:43","NDOWherps","5/11/18 1:43","NDOWherps",641008,4002888,-115.4323,36.16051,""
+","5/11/18 1:43","NDOWherps","5/11/18 1:43","NDOWherps",641008,4002888,-115.4323,36.16051,"",203
 565,565,"7b8a6ae8-7ee4-4b27-b3ee-e572426f7925","hesuca3","hesucal3","Calico",2018-05-13 16:10:00,"jvanas","visual",NA,"Utm 
 0641215
 4002768
@@ -78,106 +78,106 @@ Back at Duplex shelter
 Surface active
 Collect scat
 Follow for 45 min
-","5/14/18 2:16","NDOWherps","5/14/18 2:16","NDOWherps",641215,4002768,-115.43003,36.15943,""
+","5/14/18 2:16","NDOWherps","5/14/18 2:16","NDOWherps",641215,4002768,-115.43003,36.15943,"",203
 571,571,"23dceccb-854b-4391-8472-65dbef26307e","hesuca3","hesucal3","Calico",2018-05-15 16:25:00,"jvanas","visual",223,"Utm 
 0641212
 4002809
  3 m
 In breeding shelter used last year with C 13
-Has used once this year‰ÛÓalone","5/15/18 21:58","NDOWherps","5/15/18 21:58","NDOWherps",641212,4002809,-115.43008,36.15968,""
-604,604,"dd1fcc14-cf80-4a69-bb62-b54174936f3b","hesuca3","hesucal3","Calico",2018-05-18 18:58:00,"scohen","radio",NA,"Sitting in a draw. Not 100% on shelter. I do believe it‰Ûªs the hole in the photo.","5/23/18 20:39","NDOWherps","5/23/18 20:39","NDOWherps",641358,4002737,NA,NA,""
+Has used once this year‰ÛÓalone","5/15/18 21:58","NDOWherps","5/15/18 21:58","NDOWherps",641212,4002809,-115.43008,36.15968,"",203
+604,604,"dd1fcc14-cf80-4a69-bb62-b54174936f3b","hesuca3","hesucal3","Calico",2018-05-18 18:58:00,"scohen","radio",NA,"Sitting in a draw. Not 100% on shelter. I do believe it‰Ûªs the hole in the photo.","5/23/18 20:39","NDOWherps","5/23/18 20:39","NDOWherps",641358,4002737,NA,NA,"",203
 600,600,"e8f86b43-cbe3-4013-9de2-4d24524b66c5","hesuca3","hesucal3","Calico",2018-05-20 17:43:00,"jvanas","radio",345,"Utm 
 0641256
 4002748 3 m
 In small tortoise den under Ephedra
-","5/22/18 4:20","NDOWherps","5/22/18 4:20","NDOWherps",641256,4002748,-115.42956,36.15919,""
+","5/22/18 4:20","NDOWherps","5/22/18 4:20","NDOWherps",641256,4002748,-115.42956,36.15919,"",203
 587,587,"81c5d938-3c3e-4b0d-b406-9cb91be4e30f","hesuca3","hesucal3","Calico",2018-05-22 01:27:00,"jvanas","visual",202,"Utm 
 0641128
 4002837
  4 m
-Under small rock above Gopher Rock ","5/22/18 4:18","NDOWherps","5/22/18 4:18","NDOWherps",641128,4002837,-115.43117,36.16001,""
+Under small rock above Gopher Rock ","5/22/18 4:18","NDOWherps","5/22/18 4:18","NDOWherps",641128,4002837,-115.43117,36.16001,"",203
 618,618,"6783831b-676d-4f97-afa8-5347ab812cf4","hesuca3","hesucal3","Calico",2018-05-23 17:52:00,"jvanas","visual",NA,"Utm 
 0641758
 4002640
 5 m
 Big move closer to foundation drive
 Under Cats claw resting
-","5/23/18 23:52","NDOWherps","5/23/18 23:52","NDOWherps",641758,4002640,-115.42399,36.15812,""
+","5/23/18 23:52","NDOWherps","5/23/18 23:52","NDOWherps",641758,4002640,-115.42399,36.15812,"",203
 623,623,"b842036d-7e70-457a-a451-98ee0ac1e40a","hesuca3","hesucal3","Calico",2018-05-24 16:21:00,"jvanas","radio",165,"Utm 
 0641501
 4002704
  4 m
-Deep ledge above water creek","5/24/18 18:30","NDOWherps","5/24/18 18:36","NDOWherps",641501,4002704,-115.42688,36.1587,""
-629,629,"508126ab-7227-408d-bfe7-96badde3269e","hesuca3","hesucal3","Calico",2018-05-25 17:26:00,"scohen","radio",NA,"Found in dug out dirt shelter in a patch of cat claws.","5/25/18 22:53","NDOWherps","5/25/18 22:53","NDOWherps",641424,4002691,NA,NA,""
+Deep ledge above water creek","5/24/18 18:30","NDOWherps","5/24/18 18:36","NDOWherps",641501,4002704,-115.42688,36.1587,"",203
+629,629,"508126ab-7227-408d-bfe7-96badde3269e","hesuca3","hesucal3","Calico",2018-05-25 17:26:00,"scohen","radio",NA,"Found in dug out dirt shelter in a patch of cat claws.","5/25/18 22:53","NDOWherps","5/25/18 22:53","NDOWherps",641424,4002691,NA,NA,"",203
 670,670,"3abf12f1-6122-4c55-8c11-8469c080efc7","hesuca3","hesucal3","Calico",2018-05-29 14:36:00,"jvanas","visual",160,"Utm 
 0641333
 4002775 
  3 m
-In tortoise den ","5/29/18 17:23","NDOWherps","5/29/18 17:23","NDOWherps",641333,4002775,-115.4288,36.15947,""
+In tortoise den ","5/29/18 17:23","NDOWherps","5/29/18 17:23","NDOWherps",641333,4002775,-115.4288,36.15947,"",203
 698,698,"7f5b9d22-406c-4ee5-808e-c8e0eb5442a4","hesuca3","hesucal3","Calico",2018-06-02 15:27:00,"jvanas","radio",123,"Utm 
 0641224
 4002808
  3 m
-In same shelter with C 13","6/2/18 20:05","NDOWherps","6/2/18 20:05","NDOWherps",641224,4002808,-115.42998,36.15982,""
+In same shelter with C 13","6/2/18 20:05","NDOWherps","6/2/18 20:05","NDOWherps",641224,4002808,-115.42998,36.15982,"",203
 701,701,"286c37c3-fbe8-404b-8337-53efcc17bcdf","hesuca3","hesucal3","Calico",2018-06-04 13:41:00,"jvanas","radio",105,"Utm 
 0641224
 4002809
  3 m
 Same shelter in tortoise den
 Without C 13 who left
-","6/4/18 18:13","NDOWherps","6/4/18 18:13","NDOWherps",641224,4002809,-115.43,36.15982,""
+","6/4/18 18:13","NDOWherps","6/4/18 18:13","NDOWherps",641224,4002809,-115.43,36.15982,"",203
 720,720,"7cb98f39-2f1a-4f69-9f0a-7c1a3734f677","hesuca3","hesucal3","Calico",2018-06-06 15:38:00,"jvanas","radio",127,"Utm 
 0641228
 4002809
 3 m
-Same shelter old tortoise den ","6/8/18 18:51","NDOWherps","6/8/18 18:51","NDOWherps",641228,4002809,-115.4299,36.15972,""
+Same shelter old tortoise den ","6/8/18 18:51","NDOWherps","6/8/18 18:51","NDOWherps",641228,4002809,-115.4299,36.15972,"",203
 733,733,"d31b0beb-eff2-47f1-85eb-c85849008363","hesuca3","hesucal3","Calico",2018-06-11 15:06:00,"jvanas","radio",183,"Utm 
 0641055
 4002707
 
  3 m
-S side of Ash Cteek above C13 and Gopher Rock ","6/11/18 18:24","NDOWherps","6/11/18 18:24","NDOWherps",641055,4002707,-115.43195,36.15886,""
-799,799,"06333155-3df4-4a23-9b65-e0900ef33a13","hesuca3","hesucal3","Calico",2018-06-27 14:44:00,"scohen","radio",186,"Tracks outside of entrance.","7/11/18 21:25","NDOWherps","7/11/18 21:25","NDOWherps",640998,4002957,NA,NA,""
+S side of Ash Cteek above C13 and Gopher Rock ","6/11/18 18:24","NDOWherps","6/11/18 18:24","NDOWherps",641055,4002707,-115.43195,36.15886,"",203
+799,799,"06333155-3df4-4a23-9b65-e0900ef33a13","hesuca3","hesucal3","Calico",2018-06-27 14:44:00,"scohen","radio",186,"Tracks outside of entrance.","7/11/18 21:25","NDOWherps","7/11/18 21:25","NDOWherps",640998,4002957,NA,NA,"",203
 777,777,"264e79f7-17dd-470a-a3e9-a6d08f0f3690","hesuca3","hesucal3","Calico",2018-07-07 13:48:00,"jvanas","radio",NA,"Utm 
 0640976
 4002975
   4 m
 Back towards winter shelters
-N side Ash Canyon ","7/7/18 18:03","NDOWherps","7/7/18 18:03","NDOWherps",640976,4002975,-115.43267,36.16115,""
+N side Ash Canyon ","7/7/18 18:03","NDOWherps","7/7/18 18:03","NDOWherps",640976,4002975,-115.43267,36.16115,"",203
 785,785,"dc961211-b822-448c-9a63-2d02a0a77468","hesuca3","hesucal3","Calico",2018-07-11 14:29:00,"jvanas","radio",NA,"Utm 
 0640997
 4002971
  4 m
-  Just above C 7","7/11/18 17:19","NDOWherps","7/11/18 17:19","NDOWherps",640997,4002971,-115.43257,36.16144,""
+  Just above C 7","7/11/18 17:19","NDOWherps","7/11/18 17:19","NDOWherps",640997,4002971,-115.43257,36.16144,"",203
 813,813,"ed6cb254-eff2-44bf-b531-2c7c9921b40b","hesuca3","hesucal3","Calico",2018-07-18 14:10:00,"jvanas","radio",280,"Utm 
 0640975
 4002967
-2 m","7/18/18 16:39","NDOWherps","7/18/18 16:39","NDOWherps",640975,4002967,-115.43269,36.16117,""
+2 m","7/18/18 16:39","NDOWherps","7/18/18 16:39","NDOWherps",640975,4002967,-115.43269,36.16117,"",203
 826,826,"4cd63490-083e-4faa-a845-0ace2d8e693e","hesuca3","hesucal3","Calico",2018-07-28 14:22:00,"jvanas","radio",NA,"Utm 
 0640975
 4002971
-3 m","7/28/18 16:16","NDOWherps","7/28/18 16:16","NDOWherps",640975,4002971,-115.43273,36.16118,""
+3 m","7/28/18 16:16","NDOWherps","7/28/18 16:16","NDOWherps",640975,4002971,-115.43273,36.16118,"",203
 849,849,"3210d8a2-f6d9-4989-842d-5102babfb37d","hesuca3","hesucal3","Calico",2018-08-09 13:36:00,"jvanas","radio",NA,"Utm 
 0640987
 4002971
- 3 m","8/9/18 16:25","NDOWherps","8/9/18 16:25","NDOWherps",640987,4002971,-115.43284,36.16119,""
+ 3 m","8/9/18 16:25","NDOWherps","8/9/18 16:25","NDOWherps",640987,4002971,-115.43284,36.16119,"",203
 863,863,"4ca7a8f2-d42b-46ae-ab34-d6231a85e28d","hesuca3","hesucal3","Calico",2018-08-22 14:48:00,"jvanas","radio",NA,"Utm 
 0640976
 4002970
 4 m
-Same shelter as last week","8/22/18 16:55","NDOWherps","8/22/18 16:55","NDOWherps",640976,4002970,-115.43304,36.16109,""
-944,944,"0d7b343f-7eaa-441c-896f-e9d21be39fe6","hesuca3","hesucal3","Calico",2018-09-19 17:20:00,"scohen","radio",107,"Monster was visible in shelter","10/31/18 22:11","NDOWherps","10/31/18 22:11","NDOWherps",641119,4002683,NA,NA,""
+Same shelter as last week","8/22/18 16:55","NDOWherps","8/22/18 16:55","NDOWherps",640976,4002970,-115.43304,36.16109,"",203
+944,944,"0d7b343f-7eaa-441c-896f-e9d21be39fe6","hesuca3","hesucal3","Calico",2018-09-19 17:20:00,"scohen","radio",107,"Monster was visible in shelter","10/31/18 22:11","NDOWherps","10/31/18 22:11","NDOWherps",641119,4002683,NA,NA,"",203
 880,880,"70b65709-c1d2-4cfa-83e0-7a2665cb8d46","hesuca3","hesucal3","Calico",2018-09-22 18:22:00,"jvanas","visual",56,"Utm 
 0641059
 4002755
 3 m
 Small rock shelter 
-Ash Creek N facing slope ","9/22/18 22:13","NDOWherps","9/22/18 22:13","NDOWherps",641059,4002755,NA,NA,""
+Ash Creek N facing slope ","9/22/18 22:13","NDOWherps","9/22/18 22:13","NDOWherps",641059,4002755,NA,NA,"",203
 910,910,"8486ae55-069a-4a0a-b1be-257df5509f3a","hesuca3","hesucal3","Calico",2018-10-05 15:59:00,"jvanas","visual",35,"Utm
 0641054
 4002754
 2 m
-Under small rock ","10/9/18 17:59","NDOWherps","10/9/18 17:59","NDOWherps",641254,4002574,NA,NA,""
+Under small rock ","10/9/18 17:59","NDOWherps","10/9/18 17:59","NDOWherps",641254,4002574,NA,NA,"",203
 913,913,"db226c93-dd73-4496-a73e-e3627b8e439f","hesuca3","hesucal3","Calico",2018-10-10 14:03:00,"jvanas","visual",30,"Utm 
 0641057
 4002757
@@ -188,237 +188,237 @@ I
 
 
  
-","10/10/18 18:29","NDOWherps","10/10/18 18:29","NDOWherps",641057,4002757,NA,NA,""
+","10/10/18 18:29","NDOWherps","10/10/18 18:29","NDOWherps",641057,4002757,NA,NA,"",203
 918,918,"5aca3c93-f226-4101-bf0b-8928fca05b79","hesuca3","hesucal3","Calico",2018-10-22 16:35:00,"jvanas","radio",NA,"Utm 
 0641088
 4002897
  3 m
-Open desert under Cats claw","10/22/18 19:46","NDOWherps","10/22/18 19:46","NDOWherps",641088,4002897,NA,NA,""
+Open desert under Cats claw","10/22/18 19:46","NDOWherps","10/22/18 19:46","NDOWherps",641088,4002897,NA,NA,"",203
 932,932,"f7ac7775-a81a-4668-bd2a-cb08e7862650","hesuca3","hesucal3","Calico",2018-10-24 16:00:00,"jvanas","radio",NA,"Utm 
 0641084
 4002901
-Same shelter as 10/22","10/30/18 19:43","NDOWherps","10/30/18 19:43","NDOWherps",641081,4002902,NA,NA,""
+Same shelter as 10/22","10/30/18 19:43","NDOWherps","10/30/18 19:43","NDOWherps",641081,4002902,NA,NA,"",203
 931,931,"d26215bc-d0f4-4902-ad63-985b5b4480a1","hesuca3","hesucal3","Calico",2018-10-30 14:51:00,"jvanas","radio",NA,"Utm 
 0641081
-4002906","10/30/18 19:42","NDOWherps","10/30/18 19:42","NDOWherps",641081,4002906,NA,NA,""
+4002906","10/30/18 19:42","NDOWherps","10/30/18 19:42","NDOWherps",641081,4002906,NA,NA,"",203
 936,936,"4e4e2800-178d-4cfd-80b5-dbf79fc3cc7d","hesuca3","hesucal3","Calico",2018-10-31 18:34:00,"jvanas","radio",NA,"Utm 
 0641090
-40002902","10/31/18 20:34","NDOWherps","10/31/18 20:34","NDOWherps",641090,4002902,NA,NA,""
+40002902","10/31/18 20:34","NDOWherps","10/31/18 20:34","NDOWherps",641090,4002902,NA,NA,"",203
 955,955,"ec50d45c-3757-4156-bbf1-6c72e7e88cd5","hesuca3","hesucal3","Calico",2018-11-07 17:02:00,"jvanas","radio",NA,"Utm 
 0641086
 4002896
-Same shelter ","11/7/18 20:10","NDOWherps","11/7/18 20:10","NDOWherps",641086,4002896,NA,NA,""
+Same shelter ","11/7/18 20:10","NDOWherps","11/7/18 20:10","NDOWherps",641086,4002896,NA,NA,"",203
 959,959,"5cf32162-1d39-4670-8265-1c9ed707a5d2","hesuca3","hesucal3","Calico",2018-11-15 18:36:00,"jvanas","radio",NA,"Utm 
 0641088
 4002900
- 3 m","11/17/18 16:04","NDOWherps","11/17/18 16:04","NDOWherps",641088,4002900,NA,NA,""
+ 3 m","11/17/18 16:04","NDOWherps","11/17/18 16:04","NDOWherps",641088,4002900,NA,NA,"",203
 967,967,"9bddd7f3-0c02-4699-ae55-447b7c04e148","hesuca3","hesucal3","Calico",2018-11-27 14:59:00,"jvanas","radio",NA,"Utm 
 0641083
 4002901
-Same  earth shelter ","11/27/18 19:06","NDOWherps","11/27/18 19:06","NDOWherps",641083,4002901,NA,NA,""
+Same  earth shelter ","11/27/18 19:06","NDOWherps","11/27/18 19:06","NDOWherps",641083,4002901,NA,NA,"",203
 971,971,"43e25da6-86bc-4da5-a80c-60374140c297","hesuca3","hesucal3","Calico",2018-12-04 17:33:00,"jvanas","radio",NA,"Utm 
 0641085
 4002902
-","12/5/18 1:17","NDOWherps","12/5/18 1:17","NDOWherps",641085,4002902,NA,NA,""
+","12/5/18 1:17","NDOWherps","12/5/18 1:17","NDOWherps",641085,4002902,NA,NA,"",203
 972,972,"8bcb92c0-eb44-46cd-b5fa-40286fb9e0e0","hesuca3","hesucal3","Calico",2018-12-14 17:12:00,"jvanas","radio",NA,"Utm
 0641087
 4002890
-","12/14/18 21:20","NDOWherps","12/14/18 21:20","NDOWherps",641087,4002890,NA,NA,""
+","12/14/18 21:20","NDOWherps","12/14/18 21:20","NDOWherps",641087,4002890,NA,NA,"",203
 975,975,"4e5dca4c-820c-4c0f-9e2d-a08cfa6982f7","hesuca3","hesucal3","Calico",2018-12-20 20:46:00,"jvanas","radio",NA,"Utm 
 0641085
-4002900","12/20/18 22:20","NDOWherps","12/20/18 22:20","NDOWherps",641085,4002900,NA,NA,""
+4002900","12/20/18 22:20","NDOWherps","12/20/18 22:20","NDOWherps",641085,4002900,NA,NA,"",203
 982,982,"2979eaaa-7da4-42de-b74d-bc0654125780","hesuca3","hesucal3","Calico",2019-01-09 18:50:00,"jvanas","radio",NA,"Utm
 0641084
 4002899
-55.24 pulse","1/9/19 21:09","NDOWherps","1/9/19 21:09","NDOWherps",641084,4002899,NA,NA,""
+55.24 pulse","1/9/19 21:09","NDOWherps","1/9/19 21:09","NDOWherps",641084,4002899,NA,NA,"",203
 993,993,"b9ac3942-34b5-46f2-b57f-f2f855005ead","hesuca3","hesucal3","Calico",2019-02-16 16:20:00,"jvanas","radio",NA,"Utm 
 0641086
 4002899
-Same Acaia shelter","3/2/19 0:50","NDOWherps","3/2/19 0:50","NDOWherps",641086,4002899,NA,NA,""
+Same Acaia shelter","3/2/19 0:50","NDOWherps","3/2/19 0:50","NDOWherps",641086,4002899,NA,NA,"",203
 989,989,"dd43beb6-dfa4-4320-bb16-6ee720e7715e","hesuca3","hesucal3","Calico",2019-03-01 17:59:00,"jvanas","visual",226,"Utm 
 0641078
 4002892
-Basking at Acacia shelter entrance","3/2/19 0:46","NDOWherps","3/2/19 0:46","NDOWherps",641078,4002892,NA,NA,""
+Basking at Acacia shelter entrance","3/2/19 0:46","NDOWherps","3/2/19 0:46","NDOWherps",641078,4002892,NA,NA,"",203
 994,994,"da11e410-bb26-4279-8710-20f2382b3500","hesuca3","hesucal3","Calico",2019-03-07 19:30:00,"jvanas","radio",266,"Utm
 0641083
-4002895","3/7/19 22:54","NDOWherps","3/7/19 22:54","NDOWherps",641083,4002895,NA,NA,""
+4002895","3/7/19 22:54","NDOWherps","3/7/19 22:54","NDOWherps",641083,4002895,NA,NA,"",203
 1007,1007,"8af50881-103d-44e8-a835-de49bcaa38af","hesuca3","hesucal3","Calico",2019-03-17 20:12:00,"jvanas","visual",270,"Utm 
 0641089
 4002893
 Head only at shelter entrance 
-Same shelter ","3/18/19 1:48","NDOWherps","3/18/19 1:48","NDOWherps",641089,4002893,NA,NA,""
+Same shelter ","3/18/19 1:48","NDOWherps","3/18/19 1:48","NDOWherps",641089,4002893,NA,NA,"",203
 1008,1008,"1afd0658-c059-45b4-9764-ff0bca6d77c2","hesuca3","hesucal3","Calico",2019-03-17 21:23:00,"jvanas","visual",NA,"Utm
 0641038
 4002916
-On the move ","3/18/19 1:50","NDOWherps","3/18/19 1:50","NDOWherps",641038,4002916,NA,NA,""
+On the move ","3/18/19 1:50","NDOWherps","3/18/19 1:50","NDOWherps",641038,4002916,NA,NA,"",203
 1009,1009,"44f8e4ea-09d8-4a2f-be1a-0b91f87b6203","hesuca3","hesucal3","Calico",2019-03-17 22:26:00,"jvanas","visual",271,"Utm 
 0640986
 4002938
-Under flat rock after 1.5 hrs crawl ","3/18/19 1:53","NDOWherps","3/18/19 1:53","NDOWherps",640986,4002938,NA,NA,""
+Under flat rock after 1.5 hrs crawl ","3/18/19 1:53","NDOWherps","3/18/19 1:53","NDOWherps",640986,4002938,NA,NA,"",203
 1010,1010,"5f7ffd50-7cee-4938-a7ec-7291e42c7806","hesuca3","hesucal3","Calico",2019-03-18 17:16:00,"jvanas","visual",88,"Utm 
 0640984
 Same shelter as yesterday 
 
-4002936","3/19/19 1:27","NDOWherps","3/19/19 1:27","NDOWherps",640984,4002936,NA,NA,""
+4002936","3/19/19 1:27","NDOWherps","3/19/19 1:27","NDOWherps",640984,4002936,NA,NA,"",203
 1029,1029,"70b72b1f-84c9-414b-938b-81fcefaf1aaf","hesuca3","hesucal3","Calico",2019-03-28 18:31:00,"jvanas","visual",220,"Utm 
 0640989
 4002934
-Basking ","4/2/19 0:51","NDOWherps","4/2/19 0:51","NDOWherps",640989,4002934,NA,NA,""
+Basking ","4/2/19 0:51","NDOWherps","4/2/19 0:51","NDOWherps",640989,4002934,NA,NA,"",203
 1036,1036,"94b85b4c-1603-496a-90a5-936df39b2214","hesuca3","hesucal3","Calico",2019-04-03 18:39:00,"jvanas","visual",209,"Utm 
 0641010
 4002918
-Basking","4/3/19 21:18","NDOWherps","4/3/19 21:18","NDOWherps",641010,4002918,NA,NA,""
+Basking","4/3/19 21:18","NDOWherps","4/3/19 21:18","NDOWherps",641010,4002918,NA,NA,"",203
 1037,1037,"1f279d52-752d-414e-80ed-7b7b146ddf15","hesuca3","hesucal3","Calico",2019-04-08 18:24:00,"jvanas","radio",NA,"Utm 
 0640937
 4002909
-Move across wash south","4/8/19 22:38","NDOWherps","4/8/19 22:38","NDOWherps",640937,4002909,NA,NA,""
+Move across wash south","4/8/19 22:38","NDOWherps","4/8/19 22:38","NDOWherps",640937,4002909,NA,NA,"",203
 1052,1052,"6e4ee891-0a29-4894-9358-a44401619dfc","hesuca3","hesucal3","Calico",2019-04-13 19:16:00,"jvanas","visual",220,"Utm 
 0640990
 4002932
 Back to shelter used last week 
-","4/13/19 23:15","NDOWherps","4/13/19 23:15","NDOWherps",640990,4002932,NA,NA,""
+","4/13/19 23:15","NDOWherps","4/13/19 23:15","NDOWherps",640990,4002932,NA,NA,"",203
 1055,1055,"578bc525-7290-456b-bfb3-89a52c685eae","hesuca3","hesucal3","Calico",2019-04-15 18:34:00,"jvanas","visual",NA,"Utm
 0642354
 4002800
-Surface active","4/16/19 15:19","NDOWherps","4/16/19 15:19","NDOWherps",642354,4002800,NA,NA,""
+Surface active","4/16/19 15:19","NDOWherps","4/16/19 15:19","NDOWherps",642354,4002800,NA,NA,"",203
 1058,1058,"50e4ff9d-fae2-4667-93c5-b3117ab08e6b","hesuca3","hesucal3","Calico",2019-04-15 21:48:00,"jvanas","visual",273,"Utm 
 0642345
 4002906
 Back up slope 
 Near Camera Cave 
-","4/16/19 15:26","NDOWherps","4/16/19 15:26","NDOWherps",642345,4002906,NA,NA,""
+","4/16/19 15:26","NDOWherps","4/16/19 15:26","NDOWherps",642345,4002906,NA,NA,"",203
 1062,1062,"5b1a0484-f24d-4d4b-9e8a-1669debff114","hesuca3","hesucal3","Calico",2019-04-18 18:39:00,"jvanas","visual",212,"Utm 
 0640989
 4002932
 Basking 
-Same shelter ","4/18/19 22:31","NDOWherps","4/18/19 22:31","NDOWherps",640989,4002932,NA,NA,""
+Same shelter ","4/18/19 22:31","NDOWherps","4/18/19 22:31","NDOWherps",640989,4002932,NA,NA,"",203
 1066,1066,"43726c3b-2cf2-4009-b72f-1dd34e2ff331","hesuca3","hesucal3","Calico",2019-04-22 18:51:00,"jvanas","visual",NA,"Utm 
 0641162
 4002658
-Surface active ","4/22/19 22:47","NDOWherps","4/22/19 22:47","NDOWherps",641162,4002658,NA,NA,""
+Surface active ","4/22/19 22:47","NDOWherps","4/22/19 22:47","NDOWherps",641162,4002658,NA,NA,"",203
 1067,1067,"dc8e7bf5-ee22-4391-83fb-73f545683336","hesuca3","hesucal3","Calico",2019-04-22 20:19:00,"jvanas","visual",220,"Utm 
 0641049
 4002689
 Surface active 
-","4/22/19 22:48","NDOWherps","4/22/19 22:48","NDOWherps",641049,4002689,NA,NA,""
+","4/22/19 22:48","NDOWherps","4/22/19 22:48","NDOWherps",641049,4002689,NA,NA,"",203
 1081,1081,"b9ac1819-e287-4b1b-a59f-635590d6052e","hesuca3","hesucal3","Calico",2019-04-29 13:35:00,"jvanas","visual",201,"Utm
 0641047
 4002685
-","4/29/19 16:41","NDOWherps","4/29/19 16:41","NDOWherps",641047,4002685,NA,NA,""
+","4/29/19 16:41","NDOWherps","4/29/19 16:41","NDOWherps",641047,4002685,NA,NA,"",203
 1082,1082,"b1178bbb-0637-4538-a16d-6e1f3c556454","hesuca3","hesucal3","Calico",2019-05-01 17:33:00,"jvanas","radio",113,"Utm 
 0640998
 4002844
-New shelter ","5/3/19 13:52","NDOWherps","5/3/19 13:52","NDOWherps",640998,4002844,NA,NA,""
+New shelter ","5/3/19 13:52","NDOWherps","5/3/19 13:52","NDOWherps",640998,4002844,NA,NA,"",203
 1105,1105,"ab6bc826-83e0-475c-aad0-d29e590d4fe9","hesuca3","hesucal3","Calico",2019-05-03 16:33:00,"jvanas","visual",NA,"Utm 
 0641564
 4002275
 Surface active 
 
-Next to duplex shelter ","5/3/19 21:18","NDOWherps","5/3/19 21:18","NDOWherps",641564,4002275,NA,NA,""
+Next to duplex shelter ","5/3/19 21:18","NDOWherps","5/3/19 21:18","NDOWherps",641564,4002275,NA,NA,"",203
 1116,1116,"6bc1f8a3-a329-436d-bc83-47162d04d760","hesuca3","hesucal3","Calico",2019-05-07 15:09:00,"jvanas","radio",165,"Utm 
 0641361
 4002728
-Shelter used last year","5/7/19 19:12","NDOWherps","5/7/19 19:12","NDOWherps",641361,4002728,NA,NA,""
-1121,1121,"4a89c993-ff6d-42bf-8e94-a1df46c8323c","hesuca3","hesucal3","Calico",2019-05-09 15:56:00,"other","radio",NA,"","5/9/19 16:01","NDOWherps","5/9/19 16:01","NDOWherps",641357,4002735,NA,NA,""
+Shelter used last year","5/7/19 19:12","NDOWherps","5/7/19 19:12","NDOWherps",641361,4002728,NA,NA,"",203
+1121,1121,"4a89c993-ff6d-42bf-8e94-a1df46c8323c","hesuca3","hesucal3","Calico",2019-05-09 15:56:00,"other","radio",NA,"","5/9/19 16:01","NDOWherps","5/9/19 16:01","NDOWherps",641357,4002735,NA,NA,"",203
 1136,1136,"3327e8da-0233-447d-9357-1c086d0e1e2c","hesuca3","hesucal3","Calico",2019-05-10 21:05:00,"jvanas","radio",179,"Utm 
 0641364
 4002728
 Deep
-With another monster C 13","5/11/19 12:42","NDOWherps","5/11/19 12:42","NDOWherps",641364,4002728,NA,NA,""
+With another monster C 13","5/11/19 12:42","NDOWherps","5/11/19 12:42","NDOWherps",641364,4002728,NA,NA,"",203
 1147,1147,"b0420fb6-ade5-4054-b223-98b4127c4531","hesuca3","hesucal3","Calico",2019-05-11 18:29:00,"jvanas","radio",172,"Utm 
 0641359
-4002728","5/13/19 22:36","NDOWherps","5/13/19 22:36","NDOWherps",641359,4002728,NA,NA,""
+4002728","5/13/19 22:36","NDOWherps","5/13/19 22:36","NDOWherps",641359,4002728,NA,NA,"",203
 1140,1140,"26e6127e-488d-4452-b9b7-2ffb56601da7","hesuca3","hesucal3","Calico",2019-05-13 19:14:00,"jvanas","visual",NA,"Utm 
 0641726
 4002579 
 N of old foundation 
-","5/13/19 22:15","NDOWherps","5/13/19 22:15","NDOWherps",641726,4002579,NA,NA,""
+","5/13/19 22:15","NDOWherps","5/13/19 22:15","NDOWherps",641726,4002579,NA,NA,"",203
 1154,1154,"862e0c3a-22b4-45dd-9454-b0835508fd8e","hesuca3","hesucal3","Calico",2019-05-15 14:52:00,"jvanas","radio",212,"Utm
 0641753
 4002564
 Huge move
 By old foundation 
-428 m","5/15/19 20:42","NDOWherps","5/15/19 20:42","NDOWherps",641753,4002564,NA,NA,""
-1159,1159,"d50dcb3b-a44b-4a9c-b7e0-8755ec013d1e","hesuca3","hesucal3","Calico",2019-05-16 18:18:00,"other","visual",183,"","5/17/19 19:54","NDOWherps","5/17/19 19:54","NDOWherps",641747,4002561,NA,NA,""
+428 m","5/15/19 20:42","NDOWherps","5/15/19 20:42","NDOWherps",641753,4002564,NA,NA,"",203
+1159,1159,"d50dcb3b-a44b-4a9c-b7e0-8755ec013d1e","hesuca3","hesucal3","Calico",2019-05-16 18:18:00,"other","visual",183,"","5/17/19 19:54","NDOWherps","5/17/19 19:54","NDOWherps",641747,4002561,NA,NA,"",203
 1177,1177,"11e194ff-ea1b-4ae8-8228-da1c99a0eba7","hesuca3","hesucal3","Calico",2019-05-21 19:07:00,"jvanas","visual",297,"Utm 
 0641999
 4002881
-Basking ","5/21/19 21:24","NDOWherps","5/21/19 21:24","NDOWherps",641999,4002881,NA,NA,""
+Basking ","5/21/19 21:24","NDOWherps","5/21/19 21:24","NDOWherps",641999,4002881,NA,NA,"",203
 1181,1181,"1318b044-72c3-40d5-a636-9f07c48d9d61","hesuca3","hesucal3","Calico",2019-05-25 15:40:00,"jvanas","visual",162,"Utm 
 0641362
 4002730
-Basking Same Shelter ","5/25/19 20:18","NDOWherps","5/25/19 20:18","NDOWherps",641362,4002730,NA,NA,""
+Basking Same Shelter ","5/25/19 20:18","NDOWherps","5/25/19 20:18","NDOWherps",641362,4002730,NA,NA,"",203
 1183,1183,"86173d3e-5d79-46ea-acea-a85bf6871cd9","hesuca3","hesucal3","Calico",2019-05-28 15:57:00,"jvanas","visual",NA,"Utm 
 0641213
 4002801
 Basking by shelter used with C 13. 
-Two years ago","5/28/19 20:42","NDOWherps","5/28/19 20:42","NDOWherps",641213,4002801,NA,NA,""
+Two years ago","5/28/19 20:42","NDOWherps","5/28/19 20:42","NDOWherps",641213,4002801,NA,NA,"",203
 1191,1191,"51d067b1-2371-4456-9629-4e5e26975bc2","hesuca3","hesucal3","Calico",2019-05-30 17:12:00,"jvanas","visual",233,"Utm 
 0641203
 4002811
 Same shelter 
-Basking ","5/30/19 20:26","NDOWherps","5/30/19 20:26","NDOWherps",641203,4002811,NA,NA,""
+Basking ","5/30/19 20:26","NDOWherps","5/30/19 20:26","NDOWherps",641203,4002811,NA,NA,"",203
 1199,1199,"05ed9d25-79cc-4472-9041-42401159b8f5","hesuca3","hesucal3","Calico",2019-06-01 16:44:00,"jvanas","visual",127,"Utm 
 0641036
 4002766
-Move wash Ash Creek ","6/1/19 19:36","NDOWherps","6/1/19 19:36","NDOWherps",641036,4002766,NA,NA,""
+Move wash Ash Creek ","6/1/19 19:36","NDOWherps","6/1/19 19:36","NDOWherps",641036,4002766,NA,NA,"",203
 1212,1212,"c790c0a3-7509-480a-af80-e2015ccc328b","hesuca3","hesucal3","Calico",2019-06-05 13:48:00,"jvanas","radio",190,"Utm 
 0641352
 4002727
-","6/5/19 18:40","NDOWherps","6/5/19 18:40","NDOWherps",641352,4002727,NA,NA,""
+","6/5/19 18:40","NDOWherps","6/5/19 18:40","NDOWherps",641352,4002727,NA,NA,"",203
 1234,1234,"fd052e71-c9cd-409d-841e-3c68953eb84f","hesuca3","hesucal3","Calico",2019-06-08 14:12:00,"jvanas","radio",102,"Utm 
 0641356
-4002731","6/8/19 19:57","NDOWherps","6/8/19 19:57","NDOWherps",641356,4002731,NA,NA,""
+4002731","6/8/19 19:57","NDOWherps","6/8/19 19:57","NDOWherps",641356,4002731,NA,NA,"",203
 1242,1242,"42c844a4-d7ee-478f-9793-a30340071b0e","hesuca3","hesucal3","Calico",2019-06-10 15:55:00,"jvanas","visual",NA,"Utm 
 0641405
 4002575
 Big move
-Basking ","6/11/19 0:01","NDOWherps","6/11/19 0:01","NDOWherps",641405,4002575,NA,NA,""
+Basking ","6/11/19 0:01","NDOWherps","6/11/19 0:01","NDOWherps",641405,4002575,NA,NA,"",203
 1250,1250,"bbe09116-95ce-4dd3-8ca0-7306c6b9a8fe","hesuca3","hesucal3","Calico",2019-06-13 12:51:00,"jvanas","radio",222,"Utm 
 0641593
 4002652
 In shelter with or next to
-Unmarked GOAG","6/14/19 2:19","NDOWherps","6/14/19 2:19","NDOWherps",641593,4002652,NA,NA,""
+Unmarked GOAG","6/14/19 2:19","NDOWherps","6/14/19 2:19","NDOWherps",641593,4002652,NA,NA,"",203
 1252,1252,"3239f60c-b2be-4243-ab2b-a3da52562ff2","hesuca3","hesucal3","Calico",2019-06-13 15:26:00,"jvanas","visual",NA,"Utm 
 0641617
 4002626
-Surface active ","6/14/19 2:22","NDOWherps","6/14/19 2:22","NDOWherps",641617,4002626,NA,NA,""
+Surface active ","6/14/19 2:22","NDOWherps","6/14/19 2:22","NDOWherps",641617,4002626,NA,NA,"",203
 1271,1271,"a2a6ff07-6728-4394-8e8c-872901b9a56e","hesuca3","hesucal3","Calico",2019-06-15 16:14:00,"jvanas","visual",142,"Utm 
 0641361
 4002726
 Back to Familiar shelter
-Basking ","6/18/19 12:24","NDOWherps","6/18/19 12:24","NDOWherps",641361,4002726,NA,NA,""
+Basking ","6/18/19 12:24","NDOWherps","6/18/19 12:24","NDOWherps",641361,4002726,NA,NA,"",203
 1268,1268,"82f68b22-555d-41a1-8173-563aeeb0bdf0","hesuca3","hesucal3","Calico",2019-06-17 16:51:00,"jvanas","visual",NA,"Utm 
 0641375
 4002700
 Surface active 
-Under Acacia ","6/18/19 12:20","NDOWherps","6/18/19 12:20","NDOWherps",641375,4002700,NA,NA,""
+Under Acacia ","6/18/19 12:20","NDOWherps","6/18/19 12:20","NDOWherps",641375,4002700,NA,NA,"",203
 1274,1274,"c1dae0b2-4f46-4a0a-9574-1c6ba814e3d7","hesuca3","hesucal3","Calico",2019-06-18 16:28:00,"jvanas","visual",46,"Utm 
 0641434
 4002603
 Surface active 
-Near trail to Gopher Rock ","6/18/19 19:06","NDOWherps","6/18/19 19:06","NDOWherps",641434,4002603,NA,NA,""
+Near trail to Gopher Rock ","6/18/19 19:06","NDOWherps","6/18/19 19:06","NDOWherps",641434,4002603,NA,NA,"",203
 1284,1284,"571ce664-e7d7-4b29-90dd-94668922a388","hesuca3","hesucal3","Calico",2019-06-20 12:48:00,"jvanas","radio",112,"Utm 
 0642410
 4002830
-Moved 1.06km ","6/20/19 23:13","NDOWherps","6/20/19 23:13","NDOWherps",642410,4002830,NA,NA,""
+Moved 1.06km ","6/20/19 23:13","NDOWherps","6/20/19 23:13","NDOWherps",642410,4002830,NA,NA,"",203
 1287,1287,"d4c9402d-2062-4265-9da5-f1d4f6a4459d","hesuca3","hesucal3","Calico",2019-06-20 14:50:00,"jvanas","visual",NA,"Utm 
 0641344
-4002674","6/20/19 23:19","NDOWherps","6/20/19 23:19","NDOWherps",641344,4002674,NA,NA,""
+4002674","6/20/19 23:19","NDOWherps","6/20/19 23:19","NDOWherps",641344,4002674,NA,NA,"",203
 1288,1288,"61d077a5-3b6d-491c-a55a-dd3c54d21cf7","hesuca3","hesucal3","Calico",2019-06-20 15:23:00,"jvanas","visual",204,"Utm 
 0641329
 4002695
-Into newly dug tortoise den ","6/20/19 23:20","NDOWherps","6/20/19 23:20","NDOWherps",641329,4002695,NA,NA,""
+Into newly dug tortoise den ","6/20/19 23:20","NDOWherps","6/20/19 23:20","NDOWherps",641329,4002695,NA,NA,"",203
 1309,1309,"1eb75fc0-dc45-44fc-a8f1-c534d8ebf13b","hesuca3","hesucal3","Calico",2019-06-24 15:41:00,"jvanas","visual",NA,"Utm 
 0641411
 4002659
-Ash Creek ","6/24/19 20:11","NDOWherps","6/24/19 20:11","NDOWherps",641411,4002659,NA,NA,""
+Ash Creek ","6/24/19 20:11","NDOWherps","6/24/19 20:11","NDOWherps",641411,4002659,NA,NA,"",203
 1333,1333,"018befe2-b673-44c1-8d90-288f98874fbb","hesuca3","hesucal3","Calico",2019-06-30 13:58:00,"jvanas","radio",127,"Utm 
 0641287
-4002758","6/30/19 16:23","NDOWherps","6/30/19 16:23","NDOWherps",641287,4002758,NA,NA,""
+4002758","6/30/19 16:23","NDOWherps","6/30/19 16:23","NDOWherps",641287,4002758,NA,NA,"",203
 1352,1352,"648bcec5-689a-460a-8af5-5a075c368ac8","hesuca3","hesucal3","Calico",2019-07-09 13:01:00,"jvanas","radio",118,"Utm 
 0641282
-4002755","7/9/19 22:32","NDOWherps","7/9/19 22:32","NDOWherps",641282,4002755,NA,NA,""
+4002755","7/9/19 22:32","NDOWherps","7/9/19 22:32","NDOWherps",641282,4002755,NA,NA,"",203
 1373,1373,"184340e6-472d-4ee7-92c8-626f7b183beb","hesuca3","hesucal3","Calico",2019-07-26 14:29:00,"jvanas","radio",NA,"Utm 
 0640990
 4002937
@@ -429,15 +429,15 @@ Ash Creek ","6/24/19 20:11","NDOWherps","6/24/19 20:11","NDOWherps",641411,40026
  
 
 
-","7/26/19 22:16","NDOWherps","7/26/19 22:16","NDOWherps",640990,4002937,NA,NA,""
+","7/26/19 22:16","NDOWherps","7/26/19 22:16","NDOWherps",640990,4002937,NA,NA,"",203
 1390,NA,"79c52a89-77da-4438-bd76-8dd93c8a10e3","hesuca3","hesucal3","Calico",2019-08-12 16:01:00,"jvanas","radio",NA,"Utm 
 0640992
-4002831","8/12/19 17:42","NDOWherps","8/12/19 17:42","NDOWherps",640992,4002831,NA,NA,""
-1407,NA,"dd8a4710-e748-4512-890b-f1c847e175da","hesuca3","hesucal3","Calico",2019-09-10 16:14:00,"jjones","radio",184,"In solid rock shelter, inside crack of a dihedral; UTMs 0640979, 4003005","9/10/19 22:14","jljones76","9/10/19 22:14","jljones76",640979,4003005,NA,NA,""
-1423,NA,"fd1cca75-e3de-47f0-ab25-0287257b7291","hesuca3","hesucal3","Calico",2019-09-19 18:31:00,"other","radio",306,"UTM: 0640985, 4002989 (9m accuracy, better than lat longs)","9/19/19 19:42","NDOWherps","9/19/19 19:42","NDOWherps",640985,4002989,NA,NA,""
-1435,NA,"58f115b3-f34d-426a-b55a-4a6b993a63c6","hesuca3","hesucal3","Calico",2019-09-24 18:28:00,"other","radio",215,"Same shelter as last time. Refer to UTM from last entry, it is much more accurate and I did not have access to a GPS unit this time.","9/24/19 22:11","NDOWherps","9/24/19 22:11","NDOWherps",640985,4002989,NA,NA,""
+4002831","8/12/19 17:42","NDOWherps","8/12/19 17:42","NDOWherps",640992,4002831,NA,NA,"",203
+1407,NA,"dd8a4710-e748-4512-890b-f1c847e175da","hesuca3","hesucal3","Calico",2019-09-10 16:14:00,"jjones","radio",184,"In solid rock shelter, inside crack of a dihedral; UTMs 0640979, 4003005","9/10/19 22:14","jljones76","9/10/19 22:14","jljones76",640979,4003005,NA,NA,"",203
+1423,NA,"fd1cca75-e3de-47f0-ab25-0287257b7291","hesuca3","hesucal3","Calico",2019-09-19 18:31:00,"other","radio",306,"UTM: 0640985, 4002989 (9m accuracy, better than lat longs)","9/19/19 19:42","NDOWherps","9/19/19 19:42","NDOWherps",640985,4002989,NA,NA,"",203
+1435,NA,"58f115b3-f34d-426a-b55a-4a6b993a63c6","hesuca3","hesucal3","Calico",2019-09-24 18:28:00,"other","radio",215,"Same shelter as last time. Refer to UTM from last entry, it is much more accurate and I did not have access to a GPS unit this time.","9/24/19 22:11","NDOWherps","9/24/19 22:11","NDOWherps",640985,4002989,NA,NA,"",203
 1449,NA,"3c3c45b1-dffe-4af6-9c7e-0bbd627e9fe4","hesuca3","hesucal3","Calico",2019-09-30 18:57:00,"other","radio",235,"Same location as last time. UTM is more accurate.
-UTM: 0640985, 4002989","10/3/19 15:48","NDOWherps","10/3/19 15:48","NDOWherps",640985,4002989,NA,NA,""
+UTM: 0640985, 4002989","10/3/19 15:48","NDOWherps","10/3/19 15:48","NDOWherps",640985,4002989,NA,NA,"",203
 1474,NA,"54087851-bed7-4e7b-9e13-8b37d9cbcefe","hesuca3","hesucal3","Calico",2019-10-09 16:21:00,"jvanas","radio",208,"Utm 
 0641097
-4002849","10/9/19 18:59","NDOWherps","10/9/19 18:59","NDOWherps",641097,4002849,NA,NA,""
+4002849","10/9/19 18:59","NDOWherps","10/9/19 18:59","NDOWherps",641097,4002849,NA,NA,"",203

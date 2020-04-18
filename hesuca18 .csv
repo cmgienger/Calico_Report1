@@ -1,67 +1,67 @@
-"ObjectID","ObjectOld","GlobalID","LIZARDNUMBER","HESU.old","Site","DATE","Observer","DetectionType","ShelterAspect","Notes","CreationDate","Creator","EditDate","Editor","EASTING","NORTHING","x","y","Notes2"
+"ObjectID","ObjectOld","GlobalID","LIZARDNUMBER","HESU.old","Site","DATE","Observer","DetectionType","ShelterAspect","Notes","CreationDate","Creator","EditDate","Editor","EASTING","NORTHING","x","y","Notes2","n"
 621,621,"75edae6c-e3e8-4729-8382-35ab9dff08ab","hesuca18","other","Calico",2018-05-22 16:59:00,"jvanas","capture",NA,"Utm 
 0642596
 4002867
 Shelter near C 15
-","5/23/18 23:52","NDOWherps","5/23/18 23:52","NDOWherps",642596,4002867,-115.41466,36.16002,""
+","5/23/18 23:52","NDOWherps","5/23/18 23:52","NDOWherps",642596,4002867,-115.41466,36.16002,"",56
 655,655,"25b5d468-07df-4371-b0aa-7a019ed9860f","hesuca18","other","Calico",2018-05-26 14:12:00,"jvanas","visual",155,"Utm
 0642665
 4002868
 3 m
-Release","5/26/18 20:54","NDOWherps","5/26/18 20:54","NDOWherps",642665,4002868,-115.41388,36.16006,""
+Release","5/26/18 20:54","NDOWherps","5/26/18 20:54","NDOWherps",642665,4002868,-115.41388,36.16006,"",56
 663,663,"79a56809-097a-4617-8cd7-837e06f90d72","hesuca18","other","Calico",2018-05-27 14:50:00,"jvanas","radio",156,"Utm 
 0642623
 4002930
  5 m
 Went way high above release shelter 
-Good tracks","5/27/18 19:40","NDOWherps","5/27/18 19:40","NDOWherps",642623,4002930,-115.41443,36.16057,""
-683,683,"02047a0d-abd4-420e-aec6-4cf0dd1cb7fe","hesuca18","other","Calico",2018-05-30 16:00:00,"scohen","radio",65,"Monster was visible hanging out at entrance of shelter. Moved a little further back when I arrived.","5/31/18 3:28","NDOWherps","5/31/18 3:28","NDOWherps",642860,4003172,NA,NA,""
-681,681,"7970265d-f874-4dba-8940-9053b8a1d100","hesuca18","other","Calico",2018-05-30 20:01:00,"scohen","radio",NA,"Upon releasing C10, C10 went into a shelter with C18 and New Monster. C18 was kicked out of the shelter and took refuge under a large boulder about 5m away.","5/31/18 3:28","NDOWherps","5/31/18 3:28","NDOWherps",642862,4003170,NA,NA,""
-766,766,"81f9d283-bd53-4824-9c03-ded58fc8edb8","hesuca18","other","Calico",2018-05-31 14:01:00,"scohen","radio",210,"C18 moved 291m (as the crow flies) from the shelter it was chased out of by C10 yesterday.","6/23/18 20:58","NDOWherps","6/23/18 20:58","NDOWherps",642736,4003440,NA,NA,""
-760,760,"0ed5c3a3-5cb2-4974-914f-48c4614fc0c0","hesuca18","other","Calico",2018-06-06 16:48:00,"scohen","radio",157,"Visible inside dug out sandstone shelter.","6/23/18 20:58","NDOWherps","6/23/18 20:58","NDOWherps",643161,4003447,NA,NA,""
-794,794,"3255ccbb-c577-405d-b4fa-64773fd1378d","hesuca18","other","Calico",2018-07-11 14:58:00,"scohen","radio",21,"Tracks visible leading into shelter.","7/11/18 21:25","NDOWherps","7/11/18 21:25","NDOWherps",643285,4003270,NA,NA,""
+Good tracks","5/27/18 19:40","NDOWherps","5/27/18 19:40","NDOWherps",642623,4002930,-115.41443,36.16057,"",56
+683,683,"02047a0d-abd4-420e-aec6-4cf0dd1cb7fe","hesuca18","other","Calico",2018-05-30 16:00:00,"scohen","radio",65,"Monster was visible hanging out at entrance of shelter. Moved a little further back when I arrived.","5/31/18 3:28","NDOWherps","5/31/18 3:28","NDOWherps",642860,4003172,NA,NA,"",56
+681,681,"7970265d-f874-4dba-8940-9053b8a1d100","hesuca18","other","Calico",2018-05-30 20:01:00,"scohen","radio",NA,"Upon releasing C10, C10 went into a shelter with C18 and New Monster. C18 was kicked out of the shelter and took refuge under a large boulder about 5m away.","5/31/18 3:28","NDOWherps","5/31/18 3:28","NDOWherps",642862,4003170,NA,NA,"",56
+766,766,"81f9d283-bd53-4824-9c03-ded58fc8edb8","hesuca18","other","Calico",2018-05-31 14:01:00,"scohen","radio",210,"C18 moved 291m (as the crow flies) from the shelter it was chased out of by C10 yesterday.","6/23/18 20:58","NDOWherps","6/23/18 20:58","NDOWherps",642736,4003440,NA,NA,"",56
+760,760,"0ed5c3a3-5cb2-4974-914f-48c4614fc0c0","hesuca18","other","Calico",2018-06-06 16:48:00,"scohen","radio",157,"Visible inside dug out sandstone shelter.","6/23/18 20:58","NDOWherps","6/23/18 20:58","NDOWherps",643161,4003447,NA,NA,"",56
+794,794,"3255ccbb-c577-405d-b4fa-64773fd1378d","hesuca18","other","Calico",2018-07-11 14:58:00,"scohen","radio",21,"Tracks visible leading into shelter.","7/11/18 21:25","NDOWherps","7/11/18 21:25","NDOWherps",643285,4003270,NA,NA,"",56
 835,835,"5210f144-a24d-4a27-a30e-65d1d5f59ed3","hesuca18","other","Calico",2018-08-01 14:32:00,"jvanas","visual",304,"Utm 
 0643000
 4003283
-4 m","8/1/18 18:07","NDOWherps","8/1/18 18:07","NDOWherps",643000,4003283,-115.41016,36.16366,""
-894,894,"4e5eed77-6b3d-4c30-8cb3-fd2be931eef6","hesuca18","hesuc18","Calico",2018-09-25 15:58:00,"other","radio",82,"","9/27/18 20:17","NDOWherps","9/27/18 20:17","NDOWherps",643274,4003258,NA,NA,""
-968,968,"11996e1c-c653-424b-834b-94921d8da401","hesuca18","hesuc18","Calico",2018-11-28 18:26:00,"scohen","radio",164,"","11/28/18 22:27","NDOWherps","11/28/18 22:27","NDOWherps",643258,4003515,NA,NA,""
+4 m","8/1/18 18:07","NDOWherps","8/1/18 18:07","NDOWherps",643000,4003283,-115.41016,36.16366,"",56
+894,894,"4e5eed77-6b3d-4c30-8cb3-fd2be931eef6","hesuca18","hesuc18","Calico",2018-09-25 15:58:00,"other","radio",82,"","9/27/18 20:17","NDOWherps","9/27/18 20:17","NDOWherps",643274,4003258,NA,NA,"",56
+968,968,"11996e1c-c653-424b-834b-94921d8da401","hesuca18","hesuc18","Calico",2018-11-28 18:26:00,"scohen","radio",164,"","11/28/18 22:27","NDOWherps","11/28/18 22:27","NDOWherps",643258,4003515,NA,NA,"",56
 988,988,"1098ecc2-7cc6-4c31-91f0-021b1af58c47","hesuca18","hesuc18","Calico",2019-01-29 19:25:00,"jvanas","radio",190,"Utm 
 0643257
-4003519","1/29/19 22:10","NDOWherps","1/29/19 22:10","NDOWherps",643257,4003519,NA,NA,""
+4003519","1/29/19 22:10","NDOWherps","1/29/19 22:10","NDOWherps",643257,4003519,NA,NA,"",56
 1031,1031,"45117a9a-8326-4c99-a5d9-7d9b0e9407d9","hesuca18","other","Calico",2019-03-26 21:32:00,"jvanas","capture",NA,"Utm 
 0642695
 4002932
 With C 16
-Capture and take to NDOW ","4/2/19 1:01","NDOWherps","4/2/19 1:01","NDOWherps",642695,4002932,NA,NA,""
+Capture and take to NDOW ","4/2/19 1:01","NDOWherps","4/2/19 1:01","NDOWherps",642695,4002932,NA,NA,"",56
 1030,1030,"f64ff136-c05f-42d1-81d6-4fdc61450f36","hesuca18","other","Calico",2019-04-01 18:04:00,"jvanas","visual",NA,"Utm
 0642688
 4002920
 Release  No transmitter 
 
-","4/2/19 0:58","NDOWherps","4/2/19 0:58","NDOWherps",642688,4002920,NA,NA,""
-1091,1091,"c43dafe1-8e4a-429c-a92e-bb7961fd877b","hesuca18","hesuc18","Calico",2019-04-30 19:56:00,"other","visual",170,"Got a visual, startled monster, was outside basking, you can see the tip of ita tail disappearing into the shelter it was basking outside of","5/3/19 18:16","NDOWherps","5/3/19 18:16","NDOWherps",643213,4003179,NA,NA,""
-1125,1125,"cdbd6d82-f7c9-4941-a315-d57a2ca562b0","hesuca18","hesuc18","Calico",2019-05-08 19:18:00,"scohen","radio",141,"Visible in shelter.","5/10/19 5:46","NDOWherps","5/10/19 5:46","NDOWherps",642894,4003481,NA,NA,""
-1187,1187,"8d775bcb-facb-4c4e-8fe5-93dd57044d0b","hesuca18","hesuc18","Calico",2019-05-28 20:15:00,"other","visual",9,"Went back to take UTM and found it with an  unknown monster in the same shelter. I was unable to capture or take a photo of the second monster","5/30/19 0:26","NDOWherps","5/30/19 0:28","NDOWherps",643036,4003391,NA,NA,""
+","4/2/19 0:58","NDOWherps","4/2/19 0:58","NDOWherps",642688,4002920,NA,NA,"",56
+1091,1091,"c43dafe1-8e4a-429c-a92e-bb7961fd877b","hesuca18","hesuc18","Calico",2019-04-30 19:56:00,"other","visual",170,"Got a visual, startled monster, was outside basking, you can see the tip of ita tail disappearing into the shelter it was basking outside of","5/3/19 18:16","NDOWherps","5/3/19 18:16","NDOWherps",643213,4003179,NA,NA,"",56
+1125,1125,"cdbd6d82-f7c9-4941-a315-d57a2ca562b0","hesuca18","hesuc18","Calico",2019-05-08 19:18:00,"scohen","radio",141,"Visible in shelter.","5/10/19 5:46","NDOWherps","5/10/19 5:46","NDOWherps",642894,4003481,NA,NA,"",56
+1187,1187,"8d775bcb-facb-4c4e-8fe5-93dd57044d0b","hesuca18","hesuc18","Calico",2019-05-28 20:15:00,"other","visual",9,"Went back to take UTM and found it with an  unknown monster in the same shelter. I was unable to capture or take a photo of the second monster","5/30/19 0:26","NDOWherps","5/30/19 0:28","NDOWherps",643036,4003391,NA,NA,"",56
 1214,1214,"b45173c6-c00f-4964-b24d-1f9cb8ad0b40","hesuca18","hesuc18","Calico",2019-06-04 13:24:00,"jvanas","radio",100,"Utm 
 0642968
 4002385
-In 5th Dimension ","6/5/19 18:46","NDOWherps","6/5/19 18:46","NDOWherps",642968,4002385,NA,NA,""
-1292,1292,"bf2d4d7f-0932-45e6-8c35-c77bdb99ff5a","hesuca18","hesuc18","Calico",2019-06-12 19:15:00,"other","radio",343,"UTM: 0642903, 4003069","6/21/19 15:47","NDOWherps","6/21/19 15:47","NDOWherps",642903,4003069,NA,NA,""
-1322,1322,"b645edbe-090b-43de-b545-a8f920d7dced","hesuca18","hesuc18","Calico",2019-06-21 18:24:00,"other","radio",160,"UTM: 0642929, 4003353","6/26/19 20:08","NDOWherps","6/26/19 20:08","NDOWherps",642929,4003353,NA,NA,""
-1320,1320,"0fd3535d-31f7-42d3-98fd-7c40e1fbd84a","hesuca18","hesuc18","Calico",2019-06-24 18:54:00,"other","radio",39,"UTM: 0643158, 4003221","6/26/19 20:08","NDOWherps","6/26/19 20:08","NDOWherps",643158,4003221,NA,NA,""
+In 5th Dimension ","6/5/19 18:46","NDOWherps","6/5/19 18:46","NDOWherps",642968,4002385,NA,NA,"",56
+1292,1292,"bf2d4d7f-0932-45e6-8c35-c77bdb99ff5a","hesuca18","hesuc18","Calico",2019-06-12 19:15:00,"other","radio",343,"UTM: 0642903, 4003069","6/21/19 15:47","NDOWherps","6/21/19 15:47","NDOWherps",642903,4003069,NA,NA,"",56
+1322,1322,"b645edbe-090b-43de-b545-a8f920d7dced","hesuca18","hesuc18","Calico",2019-06-21 18:24:00,"other","radio",160,"UTM: 0642929, 4003353","6/26/19 20:08","NDOWherps","6/26/19 20:08","NDOWherps",642929,4003353,NA,NA,"",56
+1320,1320,"0fd3535d-31f7-42d3-98fd-7c40e1fbd84a","hesuca18","hesuc18","Calico",2019-06-24 18:54:00,"other","radio",39,"UTM: 0643158, 4003221","6/26/19 20:08","NDOWherps","6/26/19 20:08","NDOWherps",643158,4003221,NA,NA,"",56
 1336,1336,"019e0e12-62ed-4091-9334-705f942101e5","hesuca18","hesuc18","Calico",2019-07-01 15:54:00,"other","radio",83,"utm: 0643055, 4003323
-Same shelter as last time","7/2/19 23:01","NDOWherps","7/2/19 23:01","NDOWherps",643055,4003323,NA,NA,""
-1385,NA,"0a017aa1-3089-4547-bc00-c7d79ca06925","hesuca18","hesuc18","Calico",2019-08-05 16:55:00,"other","radio",223,"UTM: 0642455, 4002924","8/6/19 18:49","NDOWherps","8/6/19 18:49","NDOWherps",642455,4002924,NA,NA,""
+Same shelter as last time","7/2/19 23:01","NDOWherps","7/2/19 23:01","NDOWherps",643055,4003323,NA,NA,"",56
+1385,NA,"0a017aa1-3089-4547-bc00-c7d79ca06925","hesuca18","hesuc18","Calico",2019-08-05 16:55:00,"other","radio",223,"UTM: 0642455, 4002924","8/6/19 18:49","NDOWherps","8/6/19 18:49","NDOWherps",642455,4002924,NA,NA,"",56
 1412,NA,"70a3731a-6b18-417f-b292-3cae460f59aa","hesuca18","hesuc18","Calico",2019-09-11 19:16:00,"other","visual",7,"Camera would not pick up monster. 
-UTM: 0643282, 4003267","9/11/19 19:27","NDOWherps","9/11/19 19:27","NDOWherps",643282,4003267,NA,NA,""
-1429,NA,"398550c0-927f-476b-a29c-5cd844c6bbd9","hesuca18","hesuc18","Calico",2019-09-20 18:40:00,"other","radio",78,"UTM: 0643276, 4003260 (6m accuracy, better than lat longs)","9/20/19 18:48","NDOWherps","9/20/19 18:48","NDOWherps",643276,4003260,NA,NA,""
+UTM: 0643282, 4003267","9/11/19 19:27","NDOWherps","9/11/19 19:27","NDOWherps",643282,4003267,NA,NA,"",56
+1429,NA,"398550c0-927f-476b-a29c-5cd844c6bbd9","hesuca18","hesuc18","Calico",2019-09-20 18:40:00,"other","radio",78,"UTM: 0643276, 4003260 (6m accuracy, better than lat longs)","9/20/19 18:48","NDOWherps","9/20/19 18:48","NDOWherps",643276,4003260,NA,NA,"",56
 1463,NA,"5cd30940-4565-49ec-8d4c-22a3542f921c","hesuca18","hesuc18","Calico",2019-09-26 16:47:00,"jvanas","radio",339,"Utm 
 0643282
-4003278","10/7/19 18:23","NDOWherps","10/7/19 18:23","NDOWherps",643282,4003278,NA,NA,""
+4003278","10/7/19 18:23","NDOWherps","10/7/19 18:23","NDOWherps",643282,4003278,NA,NA,"",56
 1452,NA,"a0d32c7b-92a3-4e2b-9ee5-34ae7c1c014e","hesuca18","hesuc18","Calico",2019-10-03 16:41:00,"other","radio",85,"C25 had moved in front of and then into the same shelter that C18's signal was coming from.
 
 UTM: 0643280, 4003272
-","10/3/19 16:52","NDOWherps","10/3/19 16:52","NDOWherps",643280,4003272,NA,NA,""
-1469,NA,"5e93d6e1-0ad7-41de-945a-9ec3a1faab4b","hesuca18","hesuc18","Calico",2019-10-08 21:39:00,"other","radio",100,"Same shelter as last time.","10/8/19 21:46","NDOWherps","10/8/19 21:46","NDOWherps",643282,4003278,NA,NA,""
-1472,NA,"4b966ce7-2904-4831-a850-b0511b76a159","hesuca18","hesuc18","Calico",2019-10-09 16:46:00,"jjones","radio",120,"Wp 151, UTM 643282, 4003275","10/9/19 16:54","jljones76","10/9/19 16:54","jljones76",643282,4003275,NA,NA,""
+","10/3/19 16:52","NDOWherps","10/3/19 16:52","NDOWherps",643280,4003272,NA,NA,"",56
+1469,NA,"5e93d6e1-0ad7-41de-945a-9ec3a1faab4b","hesuca18","hesuc18","Calico",2019-10-08 21:39:00,"other","radio",100,"Same shelter as last time.","10/8/19 21:46","NDOWherps","10/8/19 21:46","NDOWherps",643282,4003278,NA,NA,"",56
+1472,NA,"4b966ce7-2904-4831-a850-b0511b76a159","hesuca18","hesuc18","Calico",2019-10-09 16:46:00,"jjones","radio",120,"Wp 151, UTM 643282, 4003275","10/9/19 16:54","jljones76","10/9/19 16:54","jljones76",643282,4003275,NA,NA,"",56

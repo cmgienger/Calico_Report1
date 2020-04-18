@@ -58,19 +58,19 @@ data %>%
 data <- data %>% filter(Site == "Calico")
 ```
 
-```{r Count number of obs for each lizard; add to dataframe so can be used as a filter}
+```{r Add count for number of obs for each lizard to each row of dataframe. Then use the count as a filter}
 data <- data %>%
   add_count(LIZARDNUMBER) %>%
   filter(n > 15)
 ```
 
-```{r Filter by Number of Observations for Each Lizard}
+```{r Check the Number of Observations for Each Lizard}
 data %>%
   group_by(LIZARDNUMBER) %>%
   count() %>%
   filter(n >= 15) %>%
   arrange(n)
-#note that this is just a table to check on the filtering, not a reduction of the dataframe
+#note that this is just a table to check on the filtering, not a change to the dataframe
 ```
 
 ```{r Tracking Duration}
@@ -94,9 +94,9 @@ data %>%
             firstobs = min(DATE),
             lastobs = max(DATE),
             duration = lastobs - firstobs) %>%
-  arrange(LIZARDNUMBER)
+  arrange(duration)
 ```
-```{r Drop NA data from UTMs}
+```{r Drop rows with NA data in UTMs}
 data <- data %>% drop_na(EASTING)
 ```
 
@@ -151,7 +151,7 @@ y <- as.data.frame(data$NORTHING)
 xy <- c(x,y)
 data.proj <- SpatialPointsDataFrame(xy,data, proj4string = CRS("+proj=utm +zone=11 +ellps=WGS84 +units=m +no_defs"))
 ```
-*Notice that the projection of the new object was set to UTM Zone 11.*<br>
+*Notice that the projection of the new object was set to UTM Zone 11 (All of Nevada).*<br>
 
 When creating a minimum convex polygon for the full data set (not at the individual animal level). you can use the *SpatialPointsDataFrame* created above, but R will report a warning that ```xy should contain only one column (the id of the animals), id ignored``` but will report the appropriate measurement. To run the script without a warning you will need to create a new object containing only the XY data in one column. Both scripts are as follows:<br>
 
